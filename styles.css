@@ -101,12 +101,8 @@ body {
 .main-gif,
 .success-gif {
   width: min(250px, 62vw);
-  max-height: 240px;
   object-fit: cover;
   border-radius: 22px;
-  box-shadow: var(--shadow-soft);
-  border: 4px solid rgba(255, 255, 255, 0.7);
-  background: #fff5fa;
 }
 
 .success-gif-wrap {
