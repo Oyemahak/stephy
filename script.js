@@ -16,7 +16,7 @@ const hoverMessages = [
   "Don’t do this to me 😭",
   "Still no? really? 👀",
   "Final chance? 💗",
-  "Let’s cancel 😔"
+  "May be? 😔"
 ];
 
 const subTexts = [
@@ -29,7 +29,7 @@ const subTexts = [
   "This is becoming a very dramatic situation.",
   "Even the cute gif believes the answer is yes.",
   "One last thoughtful review before you decide.",
-  "Let’s cancel is here now... but I still believe in us."
+  "May be... but I still believe in us."
 ];
 
 const gifStates = [
