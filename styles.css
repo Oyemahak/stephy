@@ -69,16 +69,16 @@ body {
 .success-title {
   font-family: "Baloo 2", cursive;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.0;
   color: var(--text-dark);
 }
 
 .main-title {
-  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-size: clamp(1.2rem, 5vw, 3.8rem);
 }
 
 .success-title {
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(1.2rem, 5vw, 4rem);
 }
 
 .sub-text,
@@ -284,7 +284,7 @@ body {
   }
 
   .card {
-    padding: 28px 18px 24px;
+    padding: 8px;
     border-radius: 22px;
   }
 
