@@ -323,7 +323,6 @@ body {
   .main-gif,
   .success-gif {
     width: min(220px, 72vw);
-    max-height: 210px;
   }
 
   .button-stage {
