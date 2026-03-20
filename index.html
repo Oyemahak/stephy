@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Are we meeting on 10th April?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="hearts hearts-1"></div>
+    <div class="hearts hearts-2"></div>
+    <div class="hearts hearts-3"></div>
+
+    <section class="card" id="questionCard">
+      <p class="eyebrow">A tiny question for Stephanie</p>
+
+      <h1 class="main-title">Are we meeting on 10th April? 💗</h1>
+
+      <p class="sub-text" id="subText">
+        Please choose carefully... my heart is watching.
+      </p>
+
+      <div class="gif-wrap">
+        <!-- Replace this with your cute default GIF -->
+        <img
+          id="mainGif"
+          class="main-gif"
+          src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif"
+          alt="Cute waiting gif"
+        />
+      </div>
+
+      <div class="button-stage" id="buttonStage">
+        <button id="yesBtn" class="btn btn-yes" type="button">Yes 💚</button>
+        <button id="noBtn" class="btn btn-no" type="button">No 😶</button>
+      </div>
+
+      <p class="tiny-note">
+        Hovering “No” may have emotional consequences.
+      </p>
+    </section>
+
+    <section class="card success-card hidden" id="successCard">
+      <p class="eyebrow">Mission successful</p>
+
+      <h2 class="success-title">YAYYYY 💖</h2>
+
+      <p class="success-text">
+        This just made my whole day brighter.
+        10th April is officially looking adorable now.
+      </p>
+
+      <div class="gif-wrap success-gif-wrap">
+        <!-- Replace this with your own celebration GIF/image -->
+        <img
+          class="success-gif"
+          src="images/your-happy-gif.gif"
+          alt="Happy celebration gif"
+        />
+      </div>
+
+      <div class="joy-lines">
+        <p>Can’t wait to see you ✨</p>
+        <p>This is now my favorite plan 🌸</p>
+        <p>Warning: I will be extra happy now 🥹</p>
+      </div>
+
+      <button id="playAgainBtn" class="btn btn-play-again" type="button">
+        Replay the cuteness
+      </button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
