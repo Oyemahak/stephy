@@ -1,0 +1,655 @@
+<style>
+  .abh-about-page,
+  .abh-about-page * {
+    box-sizing: border-box;
+  }
+
+  .abh-about-page {
+    --abh-dark: #07181c;
+    --abh-dark-2: #10262b;
+    --abh-light: #f7f5ef;
+    --abh-white: #ffffff;
+    --abh-text: #203238;
+    --abh-muted: #5e6f75;
+    --abh-gold: #f2a116;
+    --abh-border: rgba(0,0,0,0.08);
+    --abh-shadow: 0 20px 45px rgba(0,0,0,0.08);
+    background: var(--abh-light);
+    color: var(--abh-text);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .abh-about-page .abh-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .abh-about-page h1,
+  .abh-about-page h2,
+  .abh-about-page h3,
+  .abh-about-page h4 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.08;
+    color: #0e1d21;
+  }
+
+  .abh-about-page p {
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  .abh-about-page .abh-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 14px;
+    color: #2b3c42;
+    margin-bottom: 18px;
+  }
+
+  .abh-about-page .abh-tag::before,
+  .abh-about-page .abh-tag::after {
+    content: "";
+    width: 34px;
+    height: 2px;
+    background: var(--abh-gold);
+    display: inline-block;
+  }
+
+  .abh-about-page .abh-btn {
+    display: inline-block;
+    background: var(--abh-gold);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+  }
+
+  .abh-about-page .abh-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.96;
+  }
+
+  .abh-about-page .abh-btn-outline {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 26px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+  }
+
+  .abh-about-page .abh-btn-outline:hover {
+    border-color: var(--abh-gold);
+    color: var(--abh-gold);
+  }
+
+  /* HERO */
+  .abh-about-hero {
+    position: relative;
+    padding: 120px 0 110px;
+    background:
+      linear-gradient(rgba(7,24,28,0.72), rgba(7,24,28,0.72)),
+      url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: #fff;
+  }
+
+  .abh-about-hero .abh-hero-content {
+    max-width: 760px;
+  }
+
+  .abh-about-hero h1 {
+    color: #fff;
+    font-size: clamp(44px, 6vw, 84px);
+    margin-bottom: 18px;
+  }
+
+  .abh-about-hero p {
+    max-width: 680px;
+    color: rgba(255,255,255,0.88);
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .abh-about-hero .abh-hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  /* STORY */
+  .abh-story {
+    padding: 95px 0;
+    background: var(--abh-light);
+  }
+
+  .abh-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .abh-story-content h2 {
+    font-size: clamp(36px, 4vw, 60px);
+    margin-bottom: 18px;
+  }
+
+  .abh-story-content .abh-quote {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #24353a;
+    margin-bottom: 22px;
+    font-family: Georgia, serif;
+  }
+
+  .abh-story-content .abh-copy {
+    color: var(--abh-muted);
+    margin-bottom: 18px;
+  }
+
+  .abh-story-images {
+    position: relative;
+    min-height: 540px;
+  }
+
+  .abh-story-img-large,
+  .abh-story-img-small {
+    position: absolute;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--abh-shadow);
+  }
+
+  .abh-story-img-large img,
+  .abh-story-img-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .abh-story-img-large {
+    left: 0;
+    top: 0;
+    width: 62%;
+    height: 520px;
+  }
+
+  .abh-story-img-small {
+    right: 0;
+    bottom: 35px;
+    width: 48%;
+    height: 360px;
+  }
+
+  /* VALUES */
+  .abh-values {
+    padding: 95px 0;
+    background: #fff;
+  }
+
+  .abh-values-head {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto 48px;
+  }
+
+  .abh-values-head h2 {
+    font-size: clamp(34px, 4vw, 58px);
+    margin-bottom: 14px;
+  }
+
+  .abh-values-head p {
+    color: var(--abh-muted);
+    font-size: 17px;
+  }
+
+  .abh-values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .abh-value-card {
+    background: #fbf8f2;
+    border: 1px solid #efe8dc;
+    border-radius: 18px;
+    padding: 34px 28px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+    transition: 0.25s ease;
+  }
+
+  .abh-value-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .abh-value-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(242,161,22,0.14);
+    color: var(--abh-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
+
+  .abh-value-card h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .abh-value-card p {
+    color: var(--abh-muted);
+  }
+
+  /* EXPERIENCE */
+  .abh-experience {
+    padding: 100px 0;
+    background:
+      linear-gradient(rgba(7,24,28,0.88), rgba(7,24,28,0.88)),
+      url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: #fff;
+  }
+
+  .abh-experience-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 42px;
+    align-items: center;
+  }
+
+  .abh-experience-content h2 {
+    color: #fff;
+    font-size: clamp(36px, 4vw, 58px);
+    margin-bottom: 18px;
+  }
+
+  .abh-experience-content p {
+    color: rgba(255,255,255,0.86);
+    margin-bottom: 18px;
+  }
+
+  .abh-stats-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .abh-stat {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 28px 22px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+  }
+
+  .abh-stat h3 {
+    color: var(--abh-gold);
+    font-size: 42px;
+    margin-bottom: 8px;
+  }
+
+  .abh-stat p {
+    color: rgba(255,255,255,0.84);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* WHY CHOOSE */
+  .abh-choose {
+    padding: 95px 0;
+    background: var(--abh-light);
+  }
+
+  .abh-choose-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .abh-choose-image img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    box-shadow: var(--abh-shadow);
+  }
+
+  .abh-choose-content h2 {
+    font-size: clamp(34px, 4vw, 56px);
+    margin-bottom: 18px;
+  }
+
+  .abh-choose-content p {
+    color: var(--abh-muted);
+    margin-bottom: 24px;
+  }
+
+  .abh-check-list {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .abh-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #22353b;
+  }
+
+  .abh-check-mark {
+    flex: 0 0 26px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(242,161,22,0.15);
+    color: var(--abh-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+
+  /* CTA */
+  .abh-about-cta {
+    padding: 72px 0;
+    background: linear-gradient(135deg, #0d2328 0%, #17363d 100%);
+    color: #fff;
+  }
+
+  .abh-about-cta-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 26px;
+    flex-wrap: wrap;
+  }
+
+  .abh-about-cta h2 {
+    color: #fff;
+    font-size: clamp(30px, 4vw, 48px);
+    margin-bottom: 10px;
+  }
+
+  .abh-about-cta p {
+    color: rgba(255,255,255,0.82);
+    max-width: 700px;
+  }
+
+  .abh-about-cta-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 1024px) {
+    .abh-story-grid,
+    .abh-experience-grid,
+    .abh-choose-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .abh-values-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .abh-story-images {
+      min-height: 500px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .abh-about-hero {
+      padding: 95px 0 85px;
+    }
+
+    .abh-about-hero p {
+      font-size: 16px;
+    }
+
+    .abh-story,
+    .abh-values,
+    .abh-experience,
+    .abh-choose {
+      padding: 72px 0;
+    }
+
+    .abh-story-images {
+      min-height: 420px;
+    }
+
+    .abh-story-img-large {
+      width: 62%;
+      height: 390px;
+    }
+
+    .abh-story-img-small {
+      width: 48%;
+      height: 250px;
+      bottom: 20px;
+    }
+
+    .abh-values-grid,
+    .abh-stats-box {
+      grid-template-columns: 1fr;
+    }
+
+    .abh-about-cta {
+      padding: 54px 0;
+    }
+  }
+</style>
+
+<div class="abh-about-page">
+
+  <!-- HERO -->
+  <section class="abh-about-hero">
+    <div class="abh-container">
+      <div class="abh-hero-content">
+        <div class="abh-tag">About Us</div>
+        <h1>The story behind Anjaney’s Biryani House</h1>
+        <p>
+          At Anjaney’s Biryani House, we bring together authentic flavour, comforting hospitality, and carefully prepared dishes that make every visit memorable.
+        </p>
+        <div class="abh-hero-actions">
+          <a href="/menu" class="abh-btn">Explore Menu</a>
+          <a href="/reservations" class="abh-btn-outline">Book a Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="abh-story">
+    <div class="abh-container">
+      <div class="abh-story-grid">
+        <div class="abh-story-content">
+          <div class="abh-tag">Our Story</div>
+          <h2>Built on tradition, flavour, and warm service</h2>
+          <p class="abh-quote">
+            “We believe great food should feel rich in taste, comforting in every bite, and memorable enough to bring people back again.”
+          </p>
+          <p class="abh-copy">
+            Anjaney’s Biryani House was created with a passion for authentic biryani, bold spices, and the kind of dining experience that feels welcoming from the moment you arrive.
+          </p>
+          <p class="abh-copy">
+            From carefully selected ingredients to thoughtfully prepared recipes, every dish is made to reflect quality, consistency, and the joy of sharing a satisfying meal with family and friends.
+          </p>
+          <a href="/contact" class="abh-btn" style="margin-top: 12px;">Visit Us</a>
+        </div>
+
+        <div class="abh-story-images">
+          <div class="abh-story-img-large">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Restaurant interior">
+          </div>
+          <div class="abh-story-img-small">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Food served on a table">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="abh-values">
+    <div class="abh-container">
+      <div class="abh-values-head">
+        <div class="abh-tag">What We Stand For</div>
+        <h2>More than a meal — a complete experience</h2>
+        <p>
+          We focus on quality ingredients, consistent taste, and a welcoming atmosphere that makes every order and every visit enjoyable.
+        </p>
+      </div>
+
+      <div class="abh-values-grid">
+        <div class="abh-value-card">
+          <div class="abh-value-icon">01</div>
+          <h3>Authentic Taste</h3>
+          <p>
+            Our dishes are inspired by traditional flavours and prepared with care to deliver a rich, satisfying experience in every plate.
+          </p>
+        </div>
+
+        <div class="abh-value-card">
+          <div class="abh-value-icon">02</div>
+          <h3>Fresh Ingredients</h3>
+          <p>
+            We believe that quality begins with freshness, which is why every dish starts with carefully selected ingredients and balanced seasoning.
+          </p>
+        </div>
+
+        <div class="abh-value-card">
+          <div class="abh-value-icon">03</div>
+          <h3>Warm Hospitality</h3>
+          <p>
+            Whether you dine in, reserve a table, or order online, our goal is to make your experience smooth, welcoming, and memorable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="abh-experience">
+    <div class="abh-container">
+      <div class="abh-experience-grid">
+        <div class="abh-experience-content">
+          <div class="abh-tag" style="color:#fff;">Dining Experience</div>
+          <h2>A place where flavour meets comfort</h2>
+          <p>
+            We want every guest to enjoy not only the taste of our dishes, but also the comfort of the full experience — inviting interiors, attentive service, and food that feels thoughtfully prepared.
+          </p>
+          <p>
+            From a casual lunch to a family dinner or a relaxed evening out, Anjaney’s Biryani House is designed to bring people together over food that feels special.
+          </p>
+          <a href="/menu" class="abh-btn">View Our Menu</a>
+        </div>
+
+        <div class="abh-stats-box">
+          <div class="abh-stat">
+            <h3>100%</h3>
+            <p>Commitment to quality, freshness, and satisfying flavour</p>
+          </div>
+          <div class="abh-stat">
+            <h3>5★</h3>
+            <p>Experience we aim to deliver through service and food</p>
+          </div>
+          <div class="abh-stat">
+            <h3>Fresh</h3>
+            <p>Ingredients selected carefully for taste and consistency</p>
+          </div>
+          <div class="abh-stat">
+            <h3>Daily</h3>
+            <p>Prepared dishes served with care and attention every day</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="abh-choose">
+    <div class="abh-container">
+      <div class="abh-choose-grid">
+        <div class="abh-choose-image">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="Signature dish">
+        </div>
+
+        <div class="abh-choose-content">
+          <div class="abh-tag">Why Choose Us</div>
+          <h2>Food made to be remembered</h2>
+          <p>
+            We care about every detail — from flavour and presentation to service and atmosphere. Our goal is to make Anjaney’s Biryani House a place guests enjoy returning to.
+          </p>
+
+          <div class="abh-check-list">
+            <div class="abh-check-item">
+              <div class="abh-check-mark">✓</div>
+              <div>Traditional flavours with a modern and polished presentation</div>
+            </div>
+
+            <div class="abh-check-item">
+              <div class="abh-check-mark">✓</div>
+              <div>Comfortable dine-in atmosphere for couples, families, and groups</div>
+            </div>
+
+            <div class="abh-check-item">
+              <div class="abh-check-mark">✓</div>
+              <div>Simple online ordering flow for quick pickup and convenience</div>
+            </div>
+
+            <div class="abh-check-item">
+              <div class="abh-check-mark">✓</div>
+              <div>Reservation-friendly experience for planned dining visits</div>
+            </div>
+          </div>
+
+          <a href="/reservations" class="abh-btn">Reserve Your Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="abh-about-cta">
+    <div class="abh-container">
+      <div class="abh-about-cta-inner">
+        <div>
+          <h2>Ready to experience Anjaney’s Biryani House?</h2>
+          <p>
+            Explore our menu, reserve your table, or get in touch to plan your next visit.
+          </p>
+        </div>
+
+        <div class="abh-about-cta-actions">
+          <a href="/menu" class="abh-btn">View Menu</a>
+          <a href="/contact" class="abh-btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
