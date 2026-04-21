@@ -1,301 +1,129 @@
 <style>
-  .abh-custom-header,
-  .abh-custom-header * {
+  .abh-contact-bottom-wrap,
+  .abh-contact-bottom-wrap * {
     box-sizing: border-box;
   }
 
-  .abh-custom-header {
-    --abh-bg: #fff;
-    --abh-text: #112127;
-    --abh-accent: #f2a116;
-    --abh-dark: #0c1b20;
-    --abh-border: rgba(17, 33, 39, 0.08);
-    --abh-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-    width: 100%;
-    position: relative;
-    z-index: 999;
-    font-family: Arial, sans-serif;
+  .abh-contact-bottom-wrap {
+    background: #f7f5ef;
+    font-family: "Inter", Arial, sans-serif;
   }
 
-  .abh-custom-header .abh-header-shell {
-    width: min(12000px, calc(100% - 40px));
+  .abh-contact-bottom-wrap .abh-container {
+    width: min(1180px, calc(100% - 40px));
     margin: 0 auto;
-    background: var(--abh-bg);
-    border-radius: 8px;
-    box-shadow: var(--abh-shadow);
-    border: 1px solid var(--abh-border);
-    padding: 16px;
   }
 
-  .abh-custom-header .abh-header-row {
-    display: flex;
+  .abh-contact-bottom-wrap h2 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    line-height: 1.08;
+  }
+
+  .abh-contact-bottom-wrap p {
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  .abh-contact-cta {
+    padding: 80px 0;
+    background:
+      linear-gradient(rgba(13,35,40,0.88), rgba(13,35,40,0.88)),
+      url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    text-align: center;
+    color: #fff;
+  }
+
+  .abh-contact-cta-tag {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
-
-  .abh-custom-header .abh-logo {
-    flex: 0 0 auto;
-    min-width: 170px;
-  }
-
-  .abh-custom-header .abh-logo a {
-    text-decoration: none;
-    color: var(--abh-text);
-    display: inline-block;
-    font-family: Georgia, serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.02;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-  }
-
-  .abh-custom-header .abh-logo a:hover {
-    color: var(--abh-accent);
-  }
-
-  .abh-custom-header .abh-desktop-nav {
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 34px;
-  }
-
-  .abh-custom-header .abh-desktop-nav a,
-  .abh-custom-header .abh-mobile-panel a {
-    text-decoration: none;
-    color: var(--abh-text);
-    font-size: 14px;
-    font-weight: 700;
+    gap: 12px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    transition: 0.25s ease;
+    font-size: 14px;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 18px;
   }
 
-  .abh-custom-header .abh-desktop-nav a:hover,
-  .abh-custom-header .abh-desktop-nav a.abh-active,
-  .abh-custom-header .abh-mobile-panel a:hover,
-  .abh-custom-header .abh-mobile-panel a.abh-active {
-    color: var(--abh-accent);
+  .abh-contact-cta-tag::before,
+  .abh-contact-cta-tag::after {
+    content: "";
+    width: 34px;
+    height: 2px;
+    background: #f2a116;
+    display: inline-block;
   }
 
-  .abh-custom-header .abh-right-actions {
+  .abh-contact-cta h2 {
+    color: #fff;
+    font-size: clamp(36px, 5vw, 64px);
+    margin-bottom: 14px;
+  }
+
+  .abh-contact-cta p {
+    max-width: 760px;
+    margin: 0 auto 24px;
+    color: rgba(255,255,255,0.86);
+    font-size: 17px;
+  }
+
+  .abh-contact-cta-actions {
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 14px;
-    flex: 0 0 auto;
+    flex-wrap: wrap;
   }
 
-  .abh-custom-header .abh-btn {
+  .abh-contact-cta-actions a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    background: var(--abh-accent);
-    color: #fff;
     min-height: 52px;
     padding: 0 28px;
     border-radius: 6px;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     transition: 0.25s ease;
-    border: none;
-    cursor: pointer;
-    white-space: nowrap;
   }
 
-  .abh-custom-header .abh-btn:hover {
+  .abh-contact-cta-actions .abh-btn {
+    background: #f2a116;
+    color: #fff;
+  }
+
+  .abh-contact-cta-actions .abh-btn-outline {
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #fff;
+  }
+
+  .abh-contact-cta-actions .abh-btn:hover,
+  .abh-contact-cta-actions .abh-btn-outline:hover {
     transform: translateY(-2px);
-    opacity: 0.95;
-  }
-
-  .abh-custom-header .abh-menu-toggle {
-    display: none;
-    width: 48px;
-    height: 48px;
-    border: 1px solid rgba(17, 33, 39, 0.12);
-    background: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .abh-custom-header .abh-menu-toggle span {
-    position: absolute;
-    width: 22px;
-    height: 2px;
-    background: var(--abh-text);
-    border-radius: 3px;
-    transition: 0.25s ease;
-  }
-
-  .abh-custom-header .abh-menu-toggle span:nth-child(1) {
-    transform: translateY(-7px);
-  }
-
-  .abh-custom-header .abh-menu-toggle span:nth-child(2) {
-    transform: translateY(0);
-  }
-
-  .abh-custom-header .abh-menu-toggle span:nth-child(3) {
-    transform: translateY(7px);
-  }
-
-  .abh-custom-header .abh-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg);
-  }
-
-  .abh-custom-header .abh-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .abh-custom-header .abh-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg);
-  }
-
-  .abh-custom-header .abh-mobile-panel {
-    display: none;
-    padding-top: 18px;
-    margin-top: 18px;
-    border-top: 1px solid rgba(17, 33, 39, 0.08);
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .abh-custom-header .abh-mobile-panel a {
-    padding: 6px 0;
-  }
-
-  .abh-custom-header .abh-mobile-btn {
-    margin-top: 8px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .abh-custom-header .abh-mobile-panel.open {
-    display: flex;
-  }
-
-  @media (max-width: 1024px) {
-    .abh-custom-header .abh-header-shell {
-      width: min(100%, calc(100% - 24px));
-      padding: 18px 18px;
-    }
-
-    .abh-custom-header .abh-desktop-nav,
-    .abh-custom-header .abh-right-actions .abh-btn {
-      display: none;
-    }
-
-    .abh-custom-header .abh-menu-toggle {
-      display: inline-flex;
-    }
-
-    .abh-custom-header .abh-logo a {
-      font-size: 18px;
-    }
+    opacity: 0.96;
   }
 
   @media (max-width: 767px) {
-    .abh-custom-header {
-      padding: 18px 0;
-    }
-
-    .abh-custom-header .abh-header-shell {
-      border-radius: 6px;
-      padding: 16px 16px;
-    }
-
-    .abh-custom-header .abh-header-row {
-      gap: 14px;
-    }
-
-    .abh-custom-header .abh-logo {
-      min-width: 0;
-      max-width: calc(100% - 64px);
-    }
-
-    .abh-custom-header .abh-logo a {
-      font-size: 16px;
-      line-height: 1.05;
-    }
-
-    .abh-custom-header .abh-menu-toggle {
-      width: 44px;
-      height: 44px;
+    .abh-contact-cta {
+      padding: 70px 0;
     }
   }
 </style>
 
-<header class="abh-custom-header">
-  <div class="abh-header-shell">
-    <div class="abh-header-row">
-      <div class="abh-logo">
-        <a href="/">
-          ANJANEY’S BIRIYANI<br>HOUSE
-        </a>
-      </div>
-
-      <nav class="abh-desktop-nav" aria-label="Main navigation">
-        <a href="/" class="abh-active">Home</a>
-        <a href="/about">About</a>
-        <a href="/menu">Menu</a>
-        <a href="/blog">Blog</a>
-        <a href="/contact">Contact</a>
-      </nav>
-
-      <div class="abh-right-actions">
-        <a href="/reservations" class="abh-btn">Book a Table</a>
-
-        <button class="abh-menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+<div class="abh-contact-bottom-wrap">
+  <section class="abh-contact-cta">
+    <div class="abh-container">
+      <div class="abh-contact-cta-tag">Visit & Connect</div>
+      <h2>We’re here to help with your next visit</h2>
+      <p>
+        Send us a message, ask a question, or reserve a table and we’ll be happy to assist you.
+      </p>
+      <div class="abh-contact-cta-actions">
+        <a href="/menu" class="abh-btn">Explore Menu</a>
+        <a href="/reservations" class="abh-btn-outline">Reserve Now</a>
       </div>
     </div>
-
-    <div class="abh-mobile-panel" aria-label="Mobile navigation">
-      <a href="/" class="abh-active">Home</a>
-      <a href="/about">About</a>
-      <a href="/menu">Menu</a>
-      <a href="/blog">Blog</a>
-      <a href="/contact">Contact</a>
-      <a href="/reservations" class="abh-btn abh-mobile-btn">Book a Table</a>
-    </div>
-  </div>
-</header>
-
-<script>
-  (function () {
-    const header = document.currentScript.previousElementSibling;
-    if (!header) return;
-
-    const toggle = header.querySelector('.abh-menu-toggle');
-    const mobilePanel = header.querySelector('.abh-mobile-panel');
-
-    if (!toggle || !mobilePanel) return;
-
-    toggle.addEventListener('click', function () {
-      const isOpen = mobilePanel.classList.toggle('open');
-      toggle.classList.toggle('active', isOpen);
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-
-    const mobileLinks = mobilePanel.querySelectorAll('a');
-    mobileLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        mobilePanel.classList.remove('open');
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
-</script>
+  </section>
+</div>

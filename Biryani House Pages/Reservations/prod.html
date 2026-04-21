@@ -1,0 +1,593 @@
+<style>
+  .abh-res-page,
+  .abh-res-page * {
+    box-sizing: border-box;
+  }
+
+  .abh-res-page {
+    --abh-dark: #07181c;
+    --abh-dark-2: #10262b;
+    --abh-light: #f7f5ef;
+    --abh-white: #ffffff;
+    --abh-text: #203238;
+    --abh-muted: #5e6f75;
+    --abh-gold: #f2a116;
+    --abh-border: rgba(0,0,0,0.08);
+    --abh-shadow: 0 20px 45px rgba(0,0,0,0.08);
+    background: var(--abh-light);
+    color: var(--abh-text);
+    font-family: "Inter", Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .abh-res-page .abh-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .abh-res-page h1,
+  .abh-res-page h2,
+  .abh-res-page h3,
+  .abh-res-page h4 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    line-height: 1.08;
+    color: #0e1d21;
+  }
+
+  .abh-res-page p {
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  .abh-res-page .abh-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 14px;
+    color: #2b3c42;
+    margin-bottom: 18px;
+  }
+
+  .abh-res-page .abh-tag::before,
+  .abh-res-page .abh-tag::after {
+    content: "";
+    width: 34px;
+    height: 2px;
+    background: var(--abh-gold);
+    display: inline-block;
+  }
+
+  .abh-res-page .abh-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--abh-gold);
+    color: #fff;
+    text-decoration: none;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+    cursor: pointer;
+  }
+
+  .abh-res-page .abh-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.96;
+  }
+
+  .abh-res-page .abh-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 26px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #fff;
+    text-decoration: none;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+  }
+
+  .abh-res-page .abh-btn-outline:hover {
+    border-color: var(--abh-gold);
+    color: var(--abh-gold);
+  }
+
+  /* HERO */
+  .abh-res-hero {
+    position: relative;
+    padding: 120px 0 110px;
+    background:
+      linear-gradient(rgba(7,24,28,0.72), rgba(7,24,28,0.72)),
+      url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: #fff;
+  }
+
+  .abh-res-hero .abh-hero-content {
+    max-width: 760px;
+  }
+
+  .abh-res-hero h1 {
+    color: #fff;
+    font-size: clamp(44px, 6vw, 84px);
+    margin-bottom: 18px;
+  }
+
+  .abh-res-hero p {
+    max-width: 700px;
+    color: rgba(255,255,255,0.88);
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+
+  .abh-res-hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  /* INTRO CARDS */
+  .abh-res-info {
+    padding: 90px 0 35px;
+    background: var(--abh-light);
+  }
+
+  .abh-res-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .abh-res-card {
+    background: #fff;
+    border: 1px solid #efe8dc;
+    border-radius: 18px;
+    padding: 30px 26px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+    transition: 0.25s ease;
+  }
+
+  .abh-res-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .abh-res-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(242,161,22,0.14);
+    color: var(--abh-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+
+  .abh-res-card h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .abh-res-card p {
+    color: var(--abh-muted);
+  }
+
+  /* MAIN BOOKING SECTION */
+  .abh-res-main {
+    padding: 35px 0 95px;
+    background: var(--abh-light);
+  }
+
+  .abh-res-main-grid {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .abh-res-form-wrap,
+  .abh-res-side {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--abh-shadow);
+  }
+
+  .abh-res-form-wrap {
+    background: #fff;
+    border: 1px solid #efe8dc;
+    padding: 38px 34px;
+  }
+
+  .abh-res-form-wrap h2 {
+    font-size: clamp(34px, 4vw, 54px);
+    margin-bottom: 14px;
+  }
+
+  .abh-res-form-wrap > p {
+    color: var(--abh-muted);
+    margin-bottom: 24px;
+  }
+
+  .abh-shortcode-box {
+    border: 1px dashed #d8cfc1;
+    background: #fcfaf6;
+    border-radius: 16px;
+    padding: 26px 22px;
+  }
+
+  .abh-shortcode-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #7a6a4f;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  .abh-shortcode-code {
+    display: block;
+    background: #fff;
+    border: 1px solid #eadfcd;
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: #1d3036;
+    font-family: monospace;
+    font-size: 15px;
+    word-break: break-word;
+    margin-bottom: 14px;
+  }
+
+  .abh-shortcode-help {
+    color: var(--abh-muted);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .abh-res-side {
+    padding: 34px 28px;
+    background:
+      linear-gradient(rgba(7,24,28,0.93), rgba(7,24,28,0.93)),
+      url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    color: #fff;
+  }
+
+  .abh-res-side h3 {
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 12px;
+  }
+
+  .abh-res-side > p {
+    color: rgba(255,255,255,0.82);
+    margin-bottom: 26px;
+  }
+
+  .abh-side-block {
+    padding: 0 0 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .abh-side-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .abh-side-block h4 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .abh-side-block p,
+  .abh-side-block a {
+    color: rgba(255,255,255,0.84);
+    text-decoration: none;
+    line-height: 1.8;
+  }
+
+  .abh-side-block a:hover {
+    color: var(--abh-gold);
+  }
+
+  /* POLICIES */
+  .abh-res-policies {
+    padding: 0 0 95px;
+    background: var(--abh-light);
+  }
+
+  .abh-res-policies-head {
+    text-align: center;
+    max-width: 840px;
+    margin: 0 auto 42px;
+  }
+
+  .abh-res-policies-head h2 {
+    font-size: clamp(34px, 4vw, 58px);
+    margin-bottom: 14px;
+  }
+
+  .abh-res-policies-head p {
+    color: var(--abh-muted);
+    font-size: 17px;
+  }
+
+  .abh-res-policies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+
+  .abh-policy-card {
+    background: #fff;
+    border: 1px solid #efe8dc;
+    border-radius: 18px;
+    padding: 26px 22px;
+    box-shadow: 0 12px 26px rgba(0,0,0,0.04);
+  }
+
+  .abh-policy-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .abh-policy-card p {
+    color: var(--abh-muted);
+  }
+
+  /* BOTTOM CTA */
+  .abh-res-bottom-cta {
+    padding: 80px 0;
+    background:
+      linear-gradient(rgba(13,35,40,0.88), rgba(13,35,40,0.88)),
+      url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    text-align: center;
+    color: #fff;
+  }
+
+  .abh-res-bottom-cta h2 {
+    color: #fff;
+    font-size: clamp(36px, 5vw, 64px);
+    margin-bottom: 14px;
+  }
+
+  .abh-res-bottom-cta p {
+    max-width: 760px;
+    margin: 0 auto 24px;
+    color: rgba(255,255,255,0.86);
+    font-size: 17px;
+  }
+
+  .abh-res-bottom-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 1024px) {
+    .abh-res-info-grid,
+    .abh-res-policies-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .abh-res-main-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .abh-res-hero {
+      padding: 95px 0 85px;
+    }
+
+    .abh-res-hero p {
+      font-size: 16px;
+    }
+
+    .abh-res-info {
+      padding: 72px 0 28px;
+    }
+
+    .abh-res-main {
+      padding: 28px 0 72px;
+    }
+
+    .abh-res-form-wrap,
+    .abh-res-side {
+      padding: 28px 22px;
+    }
+
+    .abh-res-policies {
+      padding: 0 0 72px;
+    }
+
+    .abh-res-policies-grid,
+    .abh-res-info-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .abh-res-bottom-cta {
+      padding: 70px 0;
+    }
+  }
+</style>
+
+<div class="abh-res-page">
+
+  <!-- HERO -->
+  <section class="abh-res-hero">
+    <div class="abh-container">
+      <div class="abh-hero-content">
+        <div class="abh-tag">Reservations</div>
+        <h1>Reserve your table with ease</h1>
+        <p>
+          Plan your next visit to Anjaney’s Biryani House and enjoy authentic flavours in a warm, welcoming setting with family and friends.
+        </p>
+        <div class="abh-res-hero-actions">
+          <a href="/menu" class="abh-btn">View Menu</a>
+          <a href="/contact" class="abh-btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO CARDS -->
+  <section class="abh-res-info">
+    <div class="abh-container">
+      <div class="abh-res-info-grid">
+
+        <div class="abh-res-card">
+          <div class="abh-res-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Opening Hours</h3>
+          <p>Monday – Friday: 11:00 AM – 10:00 PM</p>
+          <p>Saturday – Sunday: 12:00 PM – 11:00 PM</p>
+        </div>
+
+        <div class="abh-res-card">
+          <div class="abh-res-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 8.5H18M6 12H18M6 15.5H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Easy Booking</h3>
+          <p>Choose your preferred date, time, and party size through our reservation form.</p>
+        </div>
+
+        <div class="abh-res-card">
+          <div class="abh-res-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 7.5C5 6.672 5.672 6 6.5 6H8.3C8.964 6 9.55 6.436 9.742 7.071L10.33 9.016C10.492 9.554 10.345 10.136 9.948 10.53L8.85 11.62C9.547 13.25 10.75 14.453 12.38 15.15L13.47 14.052C13.864 13.655 14.446 13.508 14.984 13.67L16.929 14.258C17.564 14.45 18 15.036 18 15.7V17.5C18 18.328 17.328 19 16.5 19H15C9.477 19 5 14.523 5 9V7.5Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Need Help?</h3>
+          <p>Call us directly at <strong>(647) 000-0000</strong> for assistance with bookings.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <section class="abh-res-main">
+    <div class="abh-container">
+      <div class="abh-res-main-grid">
+
+        <div class="abh-res-form-wrap">
+          <div class="abh-tag">Book Online</div>
+          <h2>Reserve your dining experience</h2>
+          <p>
+            Add your restaurant booking form here using the Five Star Restaurant Reservations shortcode.
+          </p>
+
+          <div class="abh-shortcode-box">
+            <div class="abh-shortcode-label">Paste plugin shortcode here</div>
+            <code class="abh-shortcode-code">[booking-form]</code>
+            <div class="abh-shortcode-help">
+              Replace this placeholder with the actual Five Star Restaurant Reservations shortcode in Elementor using a Shortcode widget, or paste the real shortcode here if the plugin provides one.
+            </div>
+          </div>
+        </div>
+
+        <div class="abh-res-side">
+          <div class="abh-tag" style="color:#fff;">Booking Details</div>
+          <h3>Make your visit smooth and memorable</h3>
+          <p>
+            Plan ahead and reserve your table for family meals, casual dinners, and special gatherings at Anjaney’s Biryani House.
+          </p>
+
+          <div class="abh-side-block">
+            <h4>Reservation Hours</h4>
+            <p>Monday – Friday: 11:00 AM – 10:00 PM</p>
+            <p>Saturday – Sunday: 12:00 PM – 11:00 PM</p>
+          </div>
+
+          <div class="abh-side-block">
+            <h4>Party Size</h4>
+            <p>Reservations available for parties from 1 to 8 guests.</p>
+          </div>
+
+          <div class="abh-side-block">
+            <h4>Contact</h4>
+            <p><a href="tel:+16470000000">(647) 000-0000</a></p>
+            <p><a href="mailto:info@anjaney.ca">info@anjaney.ca</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- POLICIES -->
+  <section class="abh-res-policies">
+    <div class="abh-container">
+      <div class="abh-res-policies-head">
+        <div class="abh-tag">Reservation Notes</div>
+        <h2>Helpful information before you book</h2>
+        <p>
+          Keep these quick details in mind so your dining experience feels simple, organized, and enjoyable.
+        </p>
+      </div>
+
+      <div class="abh-res-policies-grid">
+        <div class="abh-policy-card">
+          <h3>Advance Booking</h3>
+          <p>Reservations can be made in advance based on available dates and times.</p>
+        </div>
+
+        <div class="abh-policy-card">
+          <h3>Arrival Time</h3>
+          <p>Please arrive on time so we can provide the best possible dining experience.</p>
+        </div>
+
+        <div class="abh-policy-card">
+          <h3>Special Requests</h3>
+          <p>You may include special notes or preferences when making your reservation.</p>
+        </div>
+
+        <div class="abh-policy-card">
+          <h3>Need Assistance</h3>
+          <p>If you have questions about availability, call us directly and we’ll be happy to help.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="abh-res-bottom-cta">
+    <div class="abh-container">
+      <div class="abh-tag" style="color:#fff;">Plan Your Visit</div>
+      <h2>Enjoy authentic flavour in a welcoming setting</h2>
+      <p>
+        Reserve your table today or explore the menu before your visit to Anjaney’s Biryani House.
+      </p>
+      <div class="abh-res-bottom-actions">
+        <a href="/menu" class="abh-btn">Explore Menu</a>
+        <a href="/contact" class="abh-btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</div>

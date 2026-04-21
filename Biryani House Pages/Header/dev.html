@@ -5,26 +5,29 @@
   }
 
   .abh-custom-header {
-    --abh-bg: #fff;
+    --abh-bg: #ffffff;
     --abh-text: #112127;
     --abh-accent: #f2a116;
-    --abh-dark: #0c1b20;
+    --abh-light: #f7f5ef;
+    --abh-dark: #07181c;
     --abh-border: rgba(17, 33, 39, 0.08);
-    --abh-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    --abh-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
     width: 100%;
+    margin: 0;
+    padding: 0;
     position: relative;
     z-index: 999;
-    font-family: Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
   }
 
   .abh-custom-header .abh-header-shell {
-    width: min(12000px, calc(100% - 40px));
+    width: min(1180px, calc(100% - 40px));
     margin: 0 auto;
     background: var(--abh-bg);
     border-radius: 8px;
-    box-shadow: var(--abh-shadow);
     border: 1px solid var(--abh-border);
-    padding: 16px;
+    box-shadow: var(--abh-shadow);
+    padding: 18px 28px;
   }
 
   .abh-custom-header .abh-header-row {
@@ -36,19 +39,20 @@
 
   .abh-custom-header .abh-logo {
     flex: 0 0 auto;
-    min-width: 170px;
+    min-width: 180px;
   }
 
   .abh-custom-header .abh-logo a {
     text-decoration: none;
     color: var(--abh-text);
     display: inline-block;
-    font-family: Georgia, serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 20px;
     font-weight: 700;
     line-height: 1.02;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+    transition: 0.25s ease;
   }
 
   .abh-custom-header .abh-logo a:hover {
@@ -92,20 +96,21 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    background: var(--abh-accent);
-    color: #fff;
     min-height: 52px;
     padding: 0 28px;
+    border: 0;
     border-radius: 6px;
+    background: var(--abh-accent);
+    color: #ffffff;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 700;
+    font-family: "Inter", Arial, sans-serif;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    transition: 0.25s ease;
-    border: none;
-    cursor: pointer;
     white-space: nowrap;
+    transition: 0.25s ease;
+    cursor: pointer;
   }
 
   .abh-custom-header .abh-btn:hover {
@@ -115,8 +120,8 @@
 
   .abh-custom-header .abh-menu-toggle {
     display: none;
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
     border: 1px solid rgba(17, 33, 39, 0.12);
     background: #fff;
     border-radius: 6px;
@@ -186,7 +191,7 @@
   @media (max-width: 1024px) {
     .abh-custom-header .abh-header-shell {
       width: min(100%, calc(100% - 24px));
-      padding: 18px 18px;
+      padding: 16px 18px;
     }
 
     .abh-custom-header .abh-desktop-nav,
@@ -204,13 +209,9 @@
   }
 
   @media (max-width: 767px) {
-    .abh-custom-header {
-      padding: 18px 0;
-    }
-
     .abh-custom-header .abh-header-shell {
+      padding: 14px 16px;
       border-radius: 6px;
-      padding: 16px 16px;
     }
 
     .abh-custom-header .abh-header-row {
@@ -238,9 +239,7 @@
   <div class="abh-header-shell">
     <div class="abh-header-row">
       <div class="abh-logo">
-        <a href="/">
-          ANJANEY’S BIRIYANI<br>HOUSE
-        </a>
+        <a href="/">ANJANEY’S BIRIYANI<br>HOUSE</a>
       </div>
 
       <nav class="abh-desktop-nav" aria-label="Main navigation">
@@ -289,8 +288,7 @@
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    const mobileLinks = mobilePanel.querySelectorAll('a');
-    mobileLinks.forEach(function (link) {
+    mobilePanel.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         mobilePanel.classList.remove('open');
         toggle.classList.remove('active');

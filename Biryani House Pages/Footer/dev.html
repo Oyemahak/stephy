@@ -5,17 +5,18 @@
   }
 
   .abh-footer-wrap {
-    --abh-bg-dark: #03171b;
-    --abh-bg-top: #143138;
-    --abh-text: rgba(255,255,255,0.82);
-    --abh-heading: #ffffff;
+    --abh-dark: #07181c;
+    --abh-dark-2: #123038;
     --abh-accent: #f2a116;
-    --abh-line: rgba(255,255,255,0.18);
-    --abh-muted: rgba(255,255,255,0.62);
+    --abh-heading: #ffffff;
+    --abh-text: rgba(255, 255, 255, 0.82);
+    --abh-muted: rgba(255, 255, 255, 0.62);
+    --abh-line: rgba(255, 255, 255, 0.14);
+    --abh-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+    width: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
-    font-family: Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
   }
 
   .abh-footer-wrap a {
@@ -27,7 +28,6 @@
     margin: 0 auto;
   }
 
-  /* TOP CTA STRIP */
   .abh-footer-cta {
     background: linear-gradient(135deg, #123038 0%, #173840 100%);
     padding: 48px 0;
@@ -50,11 +50,12 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 14px;
-    color: rgba(255,255,255,0.92);
     margin-bottom: 12px;
+    color: rgba(255,255,255,0.92);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .abh-footer-label::before {
@@ -68,7 +69,7 @@
   .abh-footer-cta-title {
     margin: 0;
     color: var(--abh-heading);
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(34px, 4.2vw, 64px);
     line-height: 1.05;
   }
@@ -77,17 +78,18 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 58px;
-    padding: 0 34px;
+    min-height: 52px;
+    padding: 0 30px;
+    border-radius: 6px;
     background: var(--abh-accent);
     color: #fff;
-    border-radius: 6px;
-    font-size: 15px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    transition: 0.25s ease;
     white-space: nowrap;
+    transition: 0.25s ease;
   }
 
   .abh-footer-btn:hover {
@@ -95,17 +97,16 @@
     opacity: 0.96;
   }
 
-  /* MAIN FOOTER */
   .abh-footer-main {
-    background: var(--abh-bg-dark);
-    padding: 42px 0 26px;
+    background: #03171b;
+    padding: 42px 0 24px;
     margin: 0;
   }
 
   .abh-footer-brand-row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 24px;
     padding-bottom: 28px;
   }
@@ -124,9 +125,9 @@
 
   .abh-footer-logo-text {
     color: var(--abh-heading);
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: 700;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 18px;
+    font-weight: 700;
     line-height: 1.05;
     text-transform: uppercase;
     letter-spacing: 0.02em;
@@ -148,8 +149,8 @@
     align-items: center;
     justify-content: center;
     color: #fff;
-    transition: 0.25s ease;
     background: transparent;
+    transition: 0.25s ease;
   }
 
   .abh-footer-social a:hover {
@@ -158,32 +159,36 @@
     transform: translateY(-2px);
   }
 
-  .abh-footer-divider {
+  .abh-footer-divider,
+  .abh-footer-bottom-divider {
     width: 100%;
     height: 1px;
     background: var(--abh-line);
+  }
+
+  .abh-footer-divider {
     margin: 0 0 34px;
   }
 
   .abh-footer-grid {
     display: grid;
-    grid-template-columns: 1.1fr 1.1fr 1fr;
-    gap: 42px;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 40px;
   }
 
   .abh-footer-col h3 {
     margin: 0 0 18px;
     color: var(--abh-heading);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22px;
     line-height: 1.2;
   }
 
   .abh-footer-col p,
-  .abh-footer-col li,
   .abh-footer-col a,
   .abh-footer-hours-item {
     color: var(--abh-text);
+    font-family: "Inter", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.8;
   }
@@ -193,10 +198,10 @@
   }
 
   .abh-footer-link {
-    color: var(--abh-accent);
-    font-weight: 700;
     display: inline-block;
     margin-top: 18px;
+    color: var(--abh-accent);
+    font-weight: 700;
   }
 
   .abh-footer-link:hover {
@@ -204,59 +209,50 @@
   }
 
   .abh-footer-contact p {
-    margin: 0 0 16px;
+    margin: 0 0 14px;
   }
 
   .abh-footer-phone {
     display: inline-block;
-    font-size: 20px;
+    margin-bottom: 4px;
+    color: var(--abh-accent) !important;
+    font-size: 20px !important;
     font-weight: 700;
-    color: var(--abh-accent);
     line-height: 1.4;
-    margin-bottom: 6px;
   }
 
   .abh-footer-email {
     display: inline-block;
-    color: var(--abh-accent);
+    color: var(--abh-accent) !important;
     word-break: break-word;
   }
 
   .abh-footer-hours {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 18px;
   }
 
   .abh-footer-hours-item strong {
     display: block;
-    color: var(--abh-heading);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
     margin-bottom: 8px;
+    color: var(--abh-heading);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 1.3;
   }
 
   .abh-footer-bottom-divider {
-    width: 100%;
-    height: 1px;
-    background: var(--abh-line);
     margin: 34px 0 18px;
   }
 
   .abh-footer-bottom {
-    text-align: center;
     color: var(--abh-muted);
+    text-align: center;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 15px;
     line-height: 1.6;
-  }
-
-  .abh-footer-bottom a {
-    color: var(--abh-muted);
-  }
-
-  .abh-footer-bottom a:hover {
-    color: var(--abh-accent);
   }
 
   @media (max-width: 1024px) {
@@ -291,11 +287,11 @@
 
     .abh-footer-hours {
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 14px;
     }
 
     .abh-footer-phone {
-      font-size: 18px;
+      font-size: 18px !important;
     }
 
     .abh-footer-btn {
@@ -306,7 +302,6 @@
 
 <footer class="abh-footer-wrap">
 
-  <!-- TOP CTA -->
   <section class="abh-footer-cta">
     <div class="abh-container">
       <div class="abh-footer-cta-row">
@@ -320,19 +315,11 @@
     </div>
   </section>
 
-  <!-- MAIN FOOTER -->
   <section class="abh-footer-main">
     <div class="abh-container">
 
       <div class="abh-footer-brand-row">
         <div class="abh-footer-logo">
-          <svg class="abh-footer-logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M32 6L54 18V46L32 58L10 46V18L32 6Z" stroke="white" stroke-width="3"/>
-            <path d="M32 6V30L54 18" stroke="white" stroke-width="3"/>
-            <path d="M32 30L10 18" stroke="white" stroke-width="3"/>
-            <path d="M32 30V58" stroke="white" stroke-width="3"/>
-          </svg>
-
           <div class="abh-footer-logo-text">
             Anjaney’s<br>Biryani House
           </div>
@@ -366,8 +353,6 @@
       <div class="abh-footer-divider"></div>
 
       <div class="abh-footer-grid">
-
-        <!-- ABOUT -->
         <div class="abh-footer-col abh-footer-about">
           <h3>About Us</h3>
           <p>
@@ -376,7 +361,6 @@
           <a class="abh-footer-link" href="/about">Read More</a>
         </div>
 
-        <!-- CONTACT -->
         <div class="abh-footer-col abh-footer-contact">
           <h3>Contact Info</h3>
           <p>
@@ -388,7 +372,6 @@
           <a class="abh-footer-email" href="mailto:info@anjaney.ca">info@anjaney.ca</a>
         </div>
 
-        <!-- HOURS -->
         <div class="abh-footer-col">
           <h3>Working Hours</h3>
 
@@ -404,7 +387,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="abh-footer-bottom-divider"></div>
