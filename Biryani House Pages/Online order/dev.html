@@ -19,8 +19,7 @@
         font-family: "Inter", Arial, sans-serif;
     }
 
-    .abh-order-page .abh-container,
-    .abh-order-products-wrap {
+    .abh-order-page .abh-container {
         width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
     }
@@ -71,7 +70,6 @@
         background: var(--abh-gold);
         color: #fff;
         text-decoration: none;
-        font-family: "Inter", Arial, sans-serif;
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 0.06em;
@@ -95,7 +93,6 @@
         border: 1px solid rgba(255, 255, 255, 0.22);
         color: #fff;
         text-decoration: none;
-        font-family: "Inter", Arial, sans-serif;
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 0.06em;
@@ -112,8 +109,8 @@
         position: relative;
         padding: 120px 0 110px;
         background:
-            linear-gradient(rgba(7, 24, 28, 0.72), rgba(7, 24, 28, 0.72)),
-            url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            linear-gradient(rgba(7, 24, 28, 0.74), rgba(7, 24, 28, 0.74)),
+            url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
         color: #fff;
     }
 
@@ -123,15 +120,15 @@
 
     .abh-order-hero h1 {
         color: #fff;
-        font-size: clamp(44px, 6vw, 84px);
+        font-size: clamp(44px, 6vw, 82px);
         margin-bottom: 18px;
     }
 
     .abh-order-hero p {
-        max-width: 700px;
+        max-width: 690px;
         color: rgba(255, 255, 255, 0.88);
         font-size: 18px;
-        margin-bottom: 28px;
+        margin-bottom: 30px;
     }
 
     .abh-order-hero-actions {
@@ -140,26 +137,9 @@
         flex-wrap: wrap;
     }
 
-    .abh-order-intro {
-        padding: 90px 0 30px;
-        text-align: center;
-    }
-
-    .abh-order-intro h2 {
-        font-size: clamp(34px, 4vw, 58px);
-        max-width: 900px;
-        margin: 0 auto 16px;
-    }
-
-    .abh-order-intro p {
-        max-width: 760px;
-        margin: 0 auto;
-        color: var(--abh-muted);
-        font-size: 17px;
-    }
-
     .abh-order-info {
-        padding: 20px 0 40px;
+        padding: 90px 0 36px;
+        background: var(--abh-light);
     }
 
     .abh-order-info-grid {
@@ -171,9 +151,27 @@
     .abh-order-card {
         background: #fff;
         border: 1px solid #efe8dc;
-        border-radius: 18px;
-        padding: 28px 24px;
+        border-radius: 20px;
+        padding: 30px 26px;
         box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+        transition: 0.25s ease;
+    }
+
+    .abh-order-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 34px rgba(0, 0, 0, 0.07);
+    }
+
+    .abh-order-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: rgba(242, 161, 22, 0.14);
+        color: var(--abh-gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
     }
 
     .abh-order-card h3 {
@@ -185,93 +183,92 @@
         color: var(--abh-muted);
     }
 
-    .abh-order-products-wrap {
-        padding: 10px 0 90px;
+    .abh-order-help {
+        padding: 16px 0 70px;
+        background: var(--abh-light);
     }
 
-    .abh-order-products-wrap ul.products {
-        display: grid !important;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 24px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        list-style: none !important;
-    }
-
-    .abh-order-products-wrap ul.products li.product {
-        width: 100% !important;
-        margin: 0 !important;
-        float: none !important;
+    .abh-order-help-box {
         background: #fff;
         border: 1px solid #efe8dc;
-        border-radius: 18px;
-        padding: 18px 18px 24px !important;
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
-        text-align: left !important;
+        border-radius: 22px;
+        padding: 34px 30px;
+        box-shadow: var(--abh-shadow);
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 28px;
+        align-items: center;
     }
 
-    .abh-order-products-wrap ul.products li.product img {
-        width: 100% !important;
-        height: 240px !important;
-        object-fit: cover !important;
-        border-radius: 14px;
-        margin-bottom: 18px !important;
+    .abh-order-help-text h2 {
+        font-size: clamp(32px, 4vw, 52px);
+        margin-bottom: 14px;
     }
 
-    .abh-order-products-wrap ul.products li.product h2,
-    .abh-order-products-wrap ul.products li.product .woocommerce-loop-product__title {
-        font-family: "Playfair Display", Georgia, serif !important;
-        font-size: 28px !important;
-        line-height: 1.15 !important;
-        color: #0e1d21 !important;
-        margin-bottom: 10px !important;
+    .abh-order-help-text p {
+        color: var(--abh-muted);
+        margin-bottom: 10px;
     }
 
-    .abh-order-products-wrap .price {
-        color: var(--abh-gold) !important;
-        font-weight: 800 !important;
-        font-size: 22px !important;
-        margin-bottom: 14px !important;
-        display: block;
+    .abh-order-help-points {
+        display: grid;
+        gap: 12px;
+        margin-top: 18px;
     }
 
-    .abh-order-products-wrap .button,
-    .abh-order-products-wrap .add_to_cart_button,
-    .abh-order-products-wrap .product_type_simple {
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        min-height: 48px !important;
-        padding: 0 22px !important;
-        border-radius: 6px !important;
-        background: var(--abh-gold) !important;
-        color: #fff !important;
-        border: 0 !important;
-        text-decoration: none !important;
-        font-size: 14px !important;
-        font-weight: 700 !important;
-        letter-spacing: 0.05em !important;
-        text-transform: uppercase !important;
-        box-shadow: none !important;
+    .abh-order-help-points div {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        color: #24353a;
     }
 
-    .abh-order-products-wrap .button:hover,
-    .abh-order-products-wrap .add_to_cart_button:hover,
-    .abh-order-products-wrap .product_type_simple:hover {
-        opacity: 0.96;
-        transform: translateY(-2px);
+    .abh-order-help-points span {
+        width: 24px;
+        height: 24px;
+        flex: 0 0 24px;
+        border-radius: 50%;
+        background: rgba(242, 161, 22, 0.15);
+        color: var(--abh-gold);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 1px;
     }
 
-    .abh-order-products-wrap .woocommerce-result-count,
-    .abh-order-products-wrap .woocommerce-ordering {
-        margin-bottom: 24px !important;
+    .abh-order-help-side {
+        background:
+            linear-gradient(rgba(13, 35, 40, 0.88), rgba(13, 35, 40, 0.88)),
+            url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        border-radius: 20px;
+        padding: 34px 28px;
+        color: #fff;
     }
 
+    .abh-order-help-side h3 {
+        color: #fff;
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .abh-order-help-side p {
+        color: rgba(255, 255, 255, 0.84);
+        margin-bottom: 18px;
+    }
+
+    .abh-order-help-side ul {
+        margin: 0;
+        padding-left: 18px;
+        color: rgba(255, 255, 255, 0.92);
+        line-height: 1.85;
+    }
     @media (max-width: 1024px) {
 
         .abh-order-info-grid,
-        .abh-order-products-wrap ul.products {
-            grid-template-columns: 1fr 1fr !important;
+        .abh-order-help-box {
+            grid-template-columns: 1fr;
         }
     }
 
@@ -284,51 +281,37 @@
             font-size: 16px;
         }
 
-        .abh-order-intro {
-            padding: 72px 0 24px;
+        .abh-order-info {
+            padding: 72px 0 28px;
         }
 
-        .abh-order-info-grid,
-        .abh-order-products-wrap ul.products {
-            grid-template-columns: 1fr !important;
+        .abh-order-help {
+            padding: 8px 0 54px;
         }
 
-        .abh-order-products-wrap ul.products li.product img {
-            height: 220px !important;
-        }
-
-        .abh-order-products-wrap {
-            padding-bottom: 72px;
+        .abh-order-help-box,
+        .abh-order-help-side {
+            padding: 24px 20px;
         }
     }
 </style>
 
 <div class="abh-order-page">
+
     <section class="abh-order-hero">
         <div class="abh-container">
             <div class="abh-hero-content">
                 <div class="abh-tag">Order Online</div>
-                <h1>Freshly prepared favourites, ready for pickup</h1>
+                <h1>Freshly prepared biryani and favourites, ready to order</h1>
                 <p>
-                    Browse our menu, add your favourite dishes to cart, and place your order online for a smooth pickup
-                    experience from Anjaney’s Biryani House.
+                    Browse our online menu, add your favourite dishes to cart, and place your order quickly for pickup.
+                    From signature biryanis to sides, drinks, and desserts, everything is in one place.
                 </p>
                 <div class="abh-order-hero-actions">
                     <a href="/cart/" class="abh-btn">View Cart</a>
-                    <a href="/reservations/" class="abh-btn-outline">Book a Table</a>
+                    <a href="/checkout/" class="abh-btn-outline">Checkout</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="abh-order-intro">
-        <div class="abh-container">
-            <div class="abh-tag">Online Ordering</div>
-            <h2>Choose your dishes and place your order in just a few steps</h2>
-            <p>
-                Add biryanis, starters, sides, and drinks to your cart. Then continue to checkout and submit your pickup
-                order.
-            </p>
         </div>
     </section>
 
@@ -336,14 +319,40 @@
         <div class="abh-container">
             <div class="abh-order-info-grid">
                 <div class="abh-order-card">
+                    <div class="abh-order-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M6 7H18M8 4H16M7 11H17M9 15H15" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
                     <h3>Pickup Friendly</h3>
                     <p>Order ahead and collect your food at a convenient time.</p>
                 </div>
+
                 <div class="abh-order-card">
+                    <div class="abh-order-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M8 7H18M8 12H18M8 17H14" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <circle cx="5" cy="7" r="1.5" fill="currentColor" />
+                            <circle cx="5" cy="12" r="1.5" fill="currentColor" />
+                            <circle cx="5" cy="17" r="1.5" fill="currentColor" />
+                        </svg>
+                    </div>
                     <h3>Simple Checkout</h3>
                     <p>Review your order, enter your contact details, and place your request easily.</p>
                 </div>
+
                 <div class="abh-order-card">
+                    <div class="abh-order-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M6 12H18M8 8H16M10 16H14" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M7 5L5 19H19L17 5" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
                     <h3>Freshly Prepared</h3>
                     <p>Every order is made with care using quality ingredients and rich flavours.</p>
                 </div>
@@ -351,4 +360,45 @@
         </div>
     </section>
 
-    <div class="abh-order-products-wrap">
+    <section class="abh-order-help">
+        <div class="abh-container">
+            <div class="abh-order-help-box">
+                <div class="abh-order-help-text">
+                    <div class="abh-tag">How It Works</div>
+                    <h2>Order in just a few easy steps</h2>
+                    <p>
+                        Browse the items below, add your favourites to cart, and continue to checkout when you are
+                        ready.
+                    </p>
+                    <div class="abh-order-help-points">
+                        <div><span>1</span>
+                            <div>Select your dishes from the shop listing below.</div>
+                        </div>
+                        <div><span>2</span>
+                            <div>Add items to your cart and adjust quantities as needed.</div>
+                        </div>
+                        <div><span>3</span>
+                            <div>Review your cart and continue to checkout.</div>
+                        </div>
+                        <div><span>4</span>
+                            <div>Enter your details and place your pickup order.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="abh-order-help-side">
+                    <h3>Ordering Tips</h3>
+                    <p>For the best experience, start with our signature biryanis and complete your meal with sides and
+                        drinks.</p>
+                    <ul>
+                        <li>Browse by product name or category on the shop page</li>
+                        <li>Add biryani, sides, drinks, and desserts together</li>
+                        <li>Use the cart page to review your full order</li>
+                        <li>Continue to checkout when everything looks right</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

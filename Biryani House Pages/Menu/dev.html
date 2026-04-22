@@ -6,21 +6,21 @@
 
     .abh-menu-page {
         --abh-dark: #07181c;
-        --abh-dark-2: #0d2328;
+        --abh-dark-2: #10262b;
         --abh-light: #f7f5ef;
         --abh-white: #ffffff;
-        --abh-text: #d9e0dc;
-        --abh-muted: #b8c1bc;
+        --abh-text: #203238;
+        --abh-muted: #5e6f75;
         --abh-gold: #f2a116;
-        --abh-border: rgba(255, 255, 255, 0.12);
-        --abh-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+        --abh-border: rgba(0, 0, 0, 0.08);
+        --abh-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
         background: var(--abh-light);
-        color: #102126;
+        color: var(--abh-text);
         font-family: "Inter", Arial, sans-serif;
     }
 
     .abh-menu-page .abh-container {
-        width: min(1200px, calc(100% - 40px));
+        width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
     }
 
@@ -28,30 +28,30 @@
     .abh-menu-page h2,
     .abh-menu-page h3,
     .abh-menu-page h4 {
-        font-family: "Playfair Display", Georgia, serif;
         margin: 0;
-        line-height: 1.1;
-        color: #08161a;
+        font-family: "Playfair Display", Georgia, serif;
+        line-height: 1.08;
+        color: #0e1d21;
     }
 
     .abh-menu-page p {
         margin: 0;
-        line-height: 1.7;
+        line-height: 1.75;
     }
 
-    .abh-menu-page .abh-section-tag {
+    .abh-menu-page .abh-tag {
         display: inline-flex;
         align-items: center;
         gap: 12px;
-        font-size: 15px;
-        letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: #24353a;
+        letter-spacing: 0.08em;
+        font-size: 14px;
+        color: #2b3c42;
         margin-bottom: 18px;
     }
 
-    .abh-menu-page .abh-section-tag::before,
-    .abh-menu-page .abh-section-tag::after {
+    .abh-menu-page .abh-tag::before,
+    .abh-menu-page .abh-tag::after {
         content: "";
         width: 34px;
         height: 2px;
@@ -60,30 +60,43 @@
     }
 
     .abh-menu-page .abh-btn {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 28px;
+        border: 0;
+        border-radius: 6px;
         background: var(--abh-gold);
         color: #fff;
         text-decoration: none;
-        padding: 15px 28px;
-        border-radius: 6px;
+        font-size: 14px;
         font-weight: 700;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
         transition: 0.25s ease;
+        cursor: pointer;
     }
 
     .abh-menu-page .abh-btn:hover {
         transform: translateY(-2px);
-        opacity: 0.95;
+        opacity: 0.96;
     }
 
     .abh-menu-page .abh-btn-outline {
-        display: inline-block;
-        text-decoration: none;
-        padding: 14px 26px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 26px;
         border-radius: 6px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.22);
         color: #fff;
+        text-decoration: none;
+        font-size: 14px;
         font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
         transition: 0.25s ease;
     }
 
@@ -92,32 +105,36 @@
         color: var(--abh-gold);
     }
 
-    .abh-menu-page .abh-card-btn {
-        display: inline-block;
-        margin-top: 18px;
-        background: var(--abh-gold);
-        color: #fff;
-        text-decoration: none;
-        padding: 12px 20px;
+    .abh-menu-page .abh-btn-dark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
         border-radius: 6px;
-        font-size: 14px;
+        border: 1px solid #d9d0c3;
+        background: #fff;
+        color: #102126;
+        text-decoration: none;
+        font-size: 13px;
         font-weight: 700;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
         transition: 0.25s ease;
     }
 
-    .abh-menu-page .abh-card-btn:hover {
-        transform: translateY(-2px);
-        opacity: 0.95;
+    .abh-menu-page .abh-btn-dark:hover {
+        background: var(--abh-gold);
+        border-color: var(--abh-gold);
+        color: #fff;
     }
 
-    /* HERO */
     .abh-menu-hero {
         position: relative;
-        background:
-            linear-gradient(rgba(4, 14, 17, 0.72), rgba(4, 14, 17, 0.72)),
-            url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
         padding: 120px 0 110px;
+        background:
+            linear-gradient(rgba(7, 24, 28, 0.74), rgba(7, 24, 28, 0.74)),
+            url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
         color: #fff;
     }
 
@@ -127,24 +144,23 @@
 
     .abh-menu-hero h1 {
         color: #fff;
-        font-size: clamp(42px, 6vw, 78px);
-        margin-bottom: 22px;
+        font-size: clamp(44px, 6vw, 82px);
+        margin-bottom: 18px;
     }
 
     .abh-menu-hero p {
-        font-size: 18px;
+        max-width: 690px;
         color: rgba(255, 255, 255, 0.88);
-        max-width: 650px;
-        margin-bottom: 32px;
+        font-size: 18px;
+        margin-bottom: 30px;
     }
 
-    .abh-menu-hero .abh-hero-actions {
+    .abh-menu-hero-actions {
         display: flex;
         gap: 14px;
         flex-wrap: wrap;
     }
 
-    /* INTRO */
     .abh-menu-intro {
         padding: 90px 0 30px;
         text-align: center;
@@ -153,72 +169,79 @@
     .abh-menu-intro h2 {
         font-size: clamp(34px, 4vw, 58px);
         max-width: 900px;
-        margin: 0 auto 16px;
+        margin: 0 auto 14px;
     }
 
     .abh-menu-intro p {
         max-width: 760px;
         margin: 0 auto;
-        color: #55676d;
+        color: var(--abh-muted);
         font-size: 17px;
     }
 
-    /* FILTER LOOK */
-    .abh-menu-filters {
-        padding: 24px 0 50px;
+    .abh-menu-jump {
+        padding: 20px 0 50px;
     }
 
-    .abh-menu-filter-wrap {
+    .abh-menu-jump-wrap {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
         gap: 12px;
+        flex-wrap: wrap;
     }
 
-    .abh-menu-filter-wrap span {
-        padding: 12px 18px;
+    .abh-menu-jump-wrap a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
         border-radius: 999px;
         background: #fff;
         border: 1px solid #ece7dd;
         color: #24353a;
-        font-weight: 600;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
         box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+        transition: 0.25s ease;
     }
 
-    .abh-menu-filter-wrap span.abv-active,
-    .abh-menu-filter-wrap span:hover {
+    .abh-menu-jump-wrap a:hover {
         background: var(--abh-gold);
-        color: #fff;
         border-color: var(--abh-gold);
+        color: #fff;
     }
 
-    /* CATEGORY BLOCK */
-    .abh-menu-category {
-        padding: 35px 0 20px;
+    .abh-menu-section {
+        padding: 34px 0 8px;
     }
 
-    .abh-menu-category-header {
+    .abh-menu-section-head {
         display: flex;
-        align-items: end;
         justify-content: space-between;
-        gap: 20px;
+        align-items: end;
+        gap: 22px;
         margin-bottom: 28px;
         flex-wrap: wrap;
     }
 
-    .abh-menu-category-header h3 {
-        font-size: clamp(30px, 3vw, 44px);
+    .abh-menu-section-head h3 {
+        font-size: clamp(30px, 3vw, 46px);
+        margin-bottom: 8px;
     }
 
-    .abh-menu-category-header p {
-        max-width: 520px;
-        color: #5c6d72;
+    .abh-menu-section-head p {
+        max-width: 560px;
+        color: var(--abh-muted);
     }
 
     .abh-menu-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 26px;
+        gap: 24px;
     }
 
     .abh-menu-card {
@@ -228,6 +251,9 @@
         padding: 28px;
         box-shadow: 0 14px 34px rgba(0, 0, 0, 0.05);
         transition: 0.25s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
     }
 
     .abh-menu-card:hover {
@@ -235,34 +261,32 @@
         box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
     }
 
-    .abh-menu-top {
+    .abh-menu-card-top {
         display: flex;
         justify-content: space-between;
-        gap: 16px;
-        margin-bottom: 8px;
+        gap: 14px;
         align-items: start;
     }
 
-    .abh-menu-top h4 {
+    .abh-menu-card-top h4 {
         font-size: 28px;
     }
 
-    .abh-price {
+    .abh-menu-price {
         color: var(--abh-gold);
-        font-weight: 800;
         font-size: 22px;
+        font-weight: 800;
         white-space: nowrap;
     }
 
-    .abh-menu-desc {
+    .abh-menu-card p {
         color: #607177;
-        margin-bottom: 16px;
     }
 
     .abh-menu-meta {
         display: flex;
-        flex-wrap: wrap;
         gap: 10px;
+        flex-wrap: wrap;
     }
 
     .abh-menu-meta span {
@@ -274,36 +298,41 @@
         font-weight: 600;
     }
 
-    /* FEATURED STRIP */
-    .abh-featured-combo {
-        margin-top: 70px;
-        background:
-            linear-gradient(rgba(6, 18, 22, 0.85), rgba(6, 18, 22, 0.85)),
-            url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-        padding: 90px 0;
-        color: #fff;
+    .abh-menu-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding-top: 4px;
     }
 
-    .abh-featured-grid {
+    .abh-menu-highlight {
+        margin-top: 70px;
+        background:
+            linear-gradient(rgba(7, 24, 28, 0.88), rgba(7, 24, 28, 0.88)),
+            url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        color: #fff;
+        padding: 90px 0;
+    }
+
+    .abh-menu-highlight-grid {
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 40px;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 36px;
         align-items: center;
     }
 
-    .abh-featured-combo h2 {
+    .abh-menu-highlight h2 {
         color: #fff;
-        font-size: clamp(34px, 4vw, 58px);
+        font-size: clamp(36px, 4vw, 60px);
+        margin-bottom: 14px;
+    }
+
+    .abh-menu-highlight p {
+        color: rgba(255, 255, 255, 0.86);
         margin-bottom: 18px;
     }
 
-    .abh-featured-combo p {
-        color: rgba(255, 255, 255, 0.86);
-        margin-bottom: 24px;
-        max-width: 640px;
-    }
-
-    .abh-featured-box {
+    .abh-menu-highlight-box {
         background: rgba(255, 255, 255, 0.06);
         border: 1px solid rgba(255, 255, 255, 0.12);
         border-radius: 20px;
@@ -311,38 +340,30 @@
         backdrop-filter: blur(6px);
     }
 
-    .abh-featured-box h3 {
+    .abh-menu-highlight-box h3 {
         color: #fff;
-        font-size: 32px;
+        font-size: 30px;
         margin-bottom: 10px;
     }
 
-    .abh-featured-box .abh-featured-price {
-        font-size: 36px;
-        font-weight: 800;
-        color: var(--abh-gold);
-        margin-bottom: 14px;
-    }
-
-    .abh-featured-box ul {
-        margin: 0 0 22px;
+    .abh-menu-highlight-box ul {
+        margin: 0;
         padding-left: 18px;
         color: rgba(255, 255, 255, 0.9);
-        line-height: 1.8;
+        line-height: 1.85;
     }
 
-    /* CTA */
     .abh-menu-cta {
-        background: linear-gradient(135deg, #0c2227 0%, #16343b 100%);
+        padding: 72px 0;
+        background: linear-gradient(135deg, #0d2328 0%, #17363d 100%);
         color: #fff;
-        padding: 70px 0;
     }
 
     .abh-menu-cta-inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 30px;
+        gap: 26px;
         flex-wrap: wrap;
     }
 
@@ -353,8 +374,8 @@
     }
 
     .abh-menu-cta p {
-        color: rgba(255, 255, 255, 0.8);
-        max-width: 700px;
+        color: rgba(255, 255, 255, 0.82);
+        max-width: 720px;
     }
 
     .abh-menu-cta-actions {
@@ -363,24 +384,17 @@
         flex-wrap: wrap;
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 1024px) {
+
         .abh-menu-grid,
-        .abh-featured-grid {
+        .abh-menu-highlight-grid {
             grid-template-columns: 1fr;
-        }
-
-        .abh-menu-card {
-            padding: 22px;
-        }
-
-        .abh-menu-top h4 {
-            font-size: 24px;
         }
     }
 
     @media (max-width: 767px) {
         .abh-menu-hero {
-            padding: 90px 0 85px;
+            padding: 95px 0 85px;
         }
 
         .abh-menu-hero p {
@@ -388,33 +402,33 @@
         }
 
         .abh-menu-intro {
-            padding: 70px 0 24px;
+            padding: 72px 0 24px;
         }
 
-        .abh-menu-category-header {
-            margin-bottom: 20px;
+        .abh-menu-jump {
+            padding: 18px 0 36px;
         }
 
-        .abh-menu-grid {
-            gap: 18px;
+        .abh-menu-card {
+            padding: 22px;
         }
 
-        .abh-menu-top {
+        .abh-menu-card-top {
             flex-direction: column;
             gap: 8px;
         }
 
-        .abh-price {
+        .abh-menu-card-top h4 {
+            font-size: 24px;
+        }
+
+        .abh-menu-price {
             font-size: 20px;
         }
 
+        .abh-menu-highlight,
         .abh-menu-cta {
-            padding: 54px 0;
-        }
-
-        .abh-menu-page .abh-card-btn {
-            width: 100%;
-            text-align: center;
+            padding: 72px 0;
         }
     }
 </style>
@@ -424,14 +438,14 @@
     <section class="abh-menu-hero">
         <div class="abh-container">
             <div class="abh-hero-content">
-                <div class="abh-section-tag">Our Signature Menu</div>
-                <h1>Authentic flavours, rich spices, and biryani made with heart</h1>
+                <div class="abh-tag">Our Signature Menu</div>
+                <h1>Explore our full menu, from biryani favourites to desserts</h1>
                 <p>
-                    Welcome to <strong>Anjaney’s Biryani House</strong> — where every plate is prepared with care, fresh
-                    ingredients, and the comforting taste of traditional biryani.
+                    Discover the most loved dishes at Anjaney’s Biryani House. Start with our signature biryanis,
+                    complete your meal with sides and drinks, and order online anytime.
                 </p>
-                <div class="abh-hero-actions">
-                    <a href="/order-online/" class="abh-btn">Order Online</a>
+                <div class="abh-menu-hero-actions">
+                    <a href="/shop/" class="abh-btn">Order Online</a>
                     <a href="/reservations/" class="abh-btn-outline">Book a Table</a>
                 </div>
             </div>
@@ -440,328 +454,651 @@
 
     <section class="abh-menu-intro">
         <div class="abh-container">
-            <div class="abh-section-tag">Special Menu</div>
-            <h2>Explore our most loved biryanis, starters, sides, and refreshing drinks</h2>
+            <div class="abh-tag">Menu Categories</div>
+            <h2>Authentic biryani, flavour-packed starters, refreshing drinks, and more</h2>
             <p>
-                Our menu is crafted for guests who love bold flavours, aromatic rice, perfectly cooked meats, and
-                satisfying vegetarian options. Enjoy dine-in, takeout, or order online.
+                Browse by category below or head directly to the full online ordering page to add items to your cart.
             </p>
         </div>
     </section>
 
-    <section class="abh-menu-filters">
+    <section class="abh-menu-jump">
         <div class="abh-container">
-            <div class="abh-menu-filter-wrap">
-                <span class="abv-active">Biryani Specials</span>
-                <span>Starters</span>
-                <span>Veg Specials</span>
-                <span>Sides</span>
-                <span>Beverages</span>
-                <span>Desserts</span>
+            <div class="abh-menu-jump-wrap">
+                <a href="#biryani-specials">Biryani Specials</a>
+                <a href="#sides">Sides</a>
+                <a href="#starters">Starters</a>
+                <a href="#veg-specials">Veg Specials</a>
+                <a href="#beverages">Beverages</a>
+                <a href="#desserts">Desserts</a>
+                <a href="/shop/">Full Shop</a>
             </div>
         </div>
     </section>
 
-    <section class="abh-menu-category">
+    <section class="abh-menu-section" id="biryani-specials">
         <div class="abh-container">
-            <div class="abh-menu-category-header">
+            <div class="abh-menu-section-head">
                 <div>
-                    <div class="abh-section-tag">Biryani Specials</div>
-                    <h3>Signature biryanis</h3>
+                    <div class="abh-tag">Biryani Specials</div>
+                    <h3>Signature biryanis first</h3>
                 </div>
                 <p>
-                    Fragrant basmati rice, slow-cooked spices, and rich flavour in every bite. These are the dishes that
-                    define Anjaney’s Biryani House.
+                    Our most popular biryani dishes, prepared with aromatic rice, bold spices, and satisfying flavour in
+                    every serving.
                 </p>
             </div>
 
             <div class="abh-menu-grid">
                 <div class="abh-menu-card">
-                    <div class="abh-menu-top">
+                    <div class="abh-menu-card-top">
                         <h4>Chicken Biryani</h4>
-                        <div class="abh-price">$14.99</div>
+                        <div class="abh-menu-price">$14.99</div>
                     </div>
-                    <p class="abh-menu-desc">Tender chicken layered with aromatic basmati rice, herbs, and signature house spices.</p>
+                    <p>Tender chicken layered with aromatic basmati rice and signature house spices.</p>
                     <div class="abh-menu-meta">
                         <span>Most Popular</span>
                         <span>Halal</span>
                         <span>Medium Spice</span>
                     </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
+                    <div class="abh-menu-actions">
+                        <a href="/product/chicken-biryani/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Chicken+Biryani&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
                 </div>
 
                 <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Beef Biryani</h4>
-                        <div class="abh-price">$16.99</div>
+                    <div class="abh-menu-card-top">
+                        <h4>Hyderabadi Chicken Biryani</h4>
+                        <div class="abh-menu-price">$15.99</div>
                     </div>
-                    <p class="abh-menu-desc">Rich and flavourful beef cooked slowly with fragrant rice and traditional biryani masala.</p>
+                    <p>Classic Hyderabadi-style chicken biryani with layered spices and basmati rice.</p>
+                    <div class="abh-menu-meta">
+                        <span>Traditional</span>
+                        <span>Rich Flavour</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/hyderabadi-chicken-biryani/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Hyderabadi+Chicken+Biryani&post_type=product" class="abh-btn-dark">Order
+                            Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Boneless Chicken Biryani</h4>
+                        <div class="abh-menu-price">$16.49</div>
+                    </div>
+                    <p>Boneless chicken cooked with aromatic rice and bold biryani seasoning.</p>
+                    <div class="abh-menu-meta">
+                        <span>Easy to Eat</span>
+                        <span>House Favourite</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/boneless-chicken-biryani/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Boneless+Chicken+Biryani&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Beef Biryani</h4>
+                        <div class="abh-menu-price">$16.99</div>
+                    </div>
+                    <p>Rich beef biryani cooked slowly with fragrant rice and traditional spices.</p>
                     <div class="abh-menu-meta">
                         <span>Chef’s Pick</span>
                         <span>Slow Cooked</span>
-                        <span>Medium Spice</span>
                     </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
+                    <div class="abh-menu-actions">
+                        <a href="/product/beef-biryani/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Beef+Biryani&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
                 </div>
 
                 <div class="abh-menu-card">
-                    <div class="abh-menu-top">
+                    <div class="abh-menu-card-top">
                         <h4>Mutton Biryani</h4>
-                        <div class="abh-price">$17.99</div>
+                        <div class="abh-menu-price">$17.99</div>
                     </div>
-                    <p class="abh-menu-desc">A deeply satisfying biryani made with tender mutton, long-grain rice, and bold spices.</p>
+                    <p>Tender mutton layered with bold spices and fragrant rice.</p>
                     <div class="abh-menu-meta">
-                        <span>Traditional</span>
                         <span>Premium</span>
-                        <span>Rich Flavour</span>
+                        <span>Traditional</span>
                     </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
+                    <div class="abh-menu-actions">
+                        <a href="/product/mutton-biryani/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Mutton+Biryani&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
                 </div>
 
                 <div class="abh-menu-card">
-                    <div class="abh-menu-top">
+                    <div class="abh-menu-card-top">
                         <h4>Egg Biryani</h4>
-                        <div class="abh-price">$12.99</div>
+                        <div class="abh-menu-price">$12.99</div>
                     </div>
-                    <p class="abh-menu-desc">A comforting biryani layered with boiled eggs, savoury masala, and fluffy seasoned rice.</p>
+                    <p>Comforting biryani layered with boiled eggs and savoury masala.</p>
                     <div class="abh-menu-meta">
                         <span>Classic</span>
                         <span>Budget Friendly</span>
-                        <span>Mild to Medium</span>
                     </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
+                    <div class="abh-menu-actions">
+                        <a href="/product/egg-biryani/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Egg+Biryani&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Special Mixed Biryani</h4>
+                        <div class="abh-menu-price">$19.99</div>
+                    </div>
+                    <p>A rich mixed biryani with multiple flavours in one hearty serving.</p>
+                    <div class="abh-menu-meta">
+                        <span>Special</span>
+                        <span>Full Meal</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/special-mixed-biryani/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Special+Mixed+Biryani&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Family Chicken Biryani Pack</h4>
+                        <div class="abh-menu-price">$32.99</div>
+                    </div>
+                    <p>A larger serving of chicken biryani perfect for sharing.</p>
+                    <div class="abh-menu-meta">
+                        <span>Family Pack</span>
+                        <span>Sharing Meal</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/family-chicken-biryani-pack/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Family+Chicken+Biryani+Pack&post_type=product" class="abh-btn-dark">Order
+                            Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="abh-menu-category">
+    <section class="abh-menu-section" id="sides">
         <div class="abh-container">
-            <div class="abh-menu-category-header">
+            <div class="abh-menu-section-head">
                 <div>
-                    <div class="abh-section-tag">Starters</div>
-                    <h3>Perfect beginnings</h3>
+                    <div class="abh-tag">Sides</div>
+                    <h3>Complete your biryani meal</h3>
                 </div>
                 <p>
-                    Start your meal with crispy, juicy, and flavour-packed bites that pair beautifully with our mains.
+                    Cooling, spicy, and comforting side options that pair perfectly with biryani and starters.
                 </p>
             </div>
 
             <div class="abh-menu-grid">
                 <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Chicken 65</h4>
-                        <div class="abh-price">$10.99</div>
-                    </div>
-                    <p class="abh-menu-desc">Crispy fried chicken tossed in spicy South Indian flavours with curry leaves and peppers.</p>
-                    <div class="abh-menu-meta">
-                        <span>Spicy</span>
-                        <span>Best Seller</span>
-                    </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
-                </div>
-
-                <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Veg Samosa</h4>
-                        <div class="abh-price">$5.99</div>
-                    </div>
-                    <p class="abh-menu-desc">Crisp pastry filled with seasoned potatoes and peas, served hot and full of flavour.</p>
-                    <div class="abh-menu-meta">
-                        <span>Vegetarian</span>
-                        <span>Crispy</span>
-                    </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
-                </div>
-
-                <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Pepper Chicken</h4>
-                        <div class="abh-price">$11.99</div>
-                    </div>
-                    <p class="abh-menu-desc">Tender chicken tossed in black pepper, onions, and a bold house seasoning.</p>
-                    <div class="abh-menu-meta">
-                        <span>House Special</span>
-                        <span>Medium Spice</span>
-                    </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
-                </div>
-
-                <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Paneer Tikka</h4>
-                        <div class="abh-price">$10.49</div>
-                    </div>
-                    <p class="abh-menu-desc">Cottage cheese cubes marinated in spices and grilled until lightly charred and smoky.</p>
-                    <div class="abh-menu-meta">
-                        <span>Vegetarian</span>
-                        <span>Grilled</span>
-                    </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="abh-menu-category">
-        <div class="abh-container">
-            <div class="abh-menu-category-header">
-                <div>
-                    <div class="abh-section-tag">Veg Specials</div>
-                    <h3>Flavourful vegetarian favourites</h3>
-                </div>
-                <p>
-                    Thoughtfully prepared vegetarian dishes that are rich, satisfying, and full of authentic taste.
-                </p>
-            </div>
-
-            <div class="abh-menu-grid">
-                <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Vegetable Biryani</h4>
-                        <div class="abh-price">$13.49</div>
-                    </div>
-                    <p class="abh-menu-desc">Fresh vegetables, fragrant rice, herbs, and house masala cooked together for a balanced, aromatic dish.</p>
-                    <div class="abh-menu-meta">
-                        <span>Vegetarian</span>
-                        <span>Popular</span>
-                    </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
-                </div>
-
-                <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Paneer Biryani</h4>
-                        <div class="abh-price">$14.49</div>
-                    </div>
-                    <p class="abh-menu-desc">Soft paneer and seasoned rice layered with warming spices for a rich vegetarian biryani experience.</p>
-                    <div class="abh-menu-meta">
-                        <span>Vegetarian</span>
-                        <span>Rich & Creamy</span>
-                    </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
-                </div>
-
-                <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Chilli Paneer</h4>
-                        <div class="abh-price">$11.49</div>
-                    </div>
-                    <p class="abh-menu-desc">Indo-Chinese style paneer tossed with peppers, onions, and a savoury spicy sauce.</p>
-                    <div class="abh-menu-meta">
-                        <span>Vegetarian</span>
-                        <span>Spicy</span>
-                    </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
-                </div>
-
-                <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Gobi Manchurian</h4>
-                        <div class="abh-price">$9.99</div>
-                    </div>
-                    <p class="abh-menu-desc">Crispy cauliflower bites coated in a tangy, spicy sauce with peppers and onions.</p>
-                    <div class="abh-menu-meta">
-                        <span>Vegetarian</span>
-                        <span>Crispy</span>
-                    </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="abh-menu-category" style="padding-bottom: 70px;">
-        <div class="abh-container">
-            <div class="abh-menu-category-header">
-                <div>
-                    <div class="abh-section-tag">Sides & Beverages</div>
-                    <h3>Complete your meal</h3>
-                </div>
-                <p>
-                    Add comforting sides, cooling drinks, and small extras that make every order feel complete.
-                </p>
-            </div>
-
-            <div class="abh-menu-grid">
-                <div class="abh-menu-card">
-                    <div class="abh-menu-top">
+                    <div class="abh-menu-card-top">
                         <h4>Raita</h4>
-                        <div class="abh-price">$3.49</div>
+                        <div class="abh-menu-price">$3.49</div>
                     </div>
-                    <p class="abh-menu-desc">Creamy yogurt with herbs and spices — the perfect cooling side with biryani.</p>
+                    <p>Creamy yogurt side with herbs and spices.</p>
                     <div class="abh-menu-meta">
-                        <span>Side</span>
                         <span>Cooling</span>
+                        <span>Popular Side</span>
                     </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
+                    <div class="abh-menu-actions">
+                        <a href="/product/raita/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Raita&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
                 </div>
 
                 <div class="abh-menu-card">
-                    <div class="abh-menu-top">
+                    <div class="abh-menu-card-top">
                         <h4>Mirchi Salan</h4>
-                        <div class="abh-price">$3.99</div>
+                        <div class="abh-menu-price">$3.99</div>
                     </div>
-                    <p class="abh-menu-desc">A classic tangy and spicy curry served as a traditional accompaniment to biryani.</p>
+                    <p>Traditional spicy and tangy curry served with biryani.</p>
                     <div class="abh-menu-meta">
                         <span>Traditional Side</span>
                         <span>Spicy</span>
                     </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
+                    <div class="abh-menu-actions">
+                        <a href="/product/mirchi-salan/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Mirchi+Salan&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
                 </div>
 
                 <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Mango Lassi</h4>
-                        <div class="abh-price">$4.99</div>
+                    <div class="abh-menu-card-top">
+                        <h4>Plain Yogurt</h4>
+                        <div class="abh-menu-price">$2.99</div>
                     </div>
-                    <p class="abh-menu-desc">Chilled mango yogurt drink that is refreshing, smooth, and lightly sweet.</p>
+                    <p>Simple cooling yogurt side.</p>
                     <div class="abh-menu-meta">
-                        <span>Beverage</span>
-                        <span>Refreshing</span>
+                        <span>Light</span>
+                        <span>Cooling</span>
                     </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
+                    <div class="abh-menu-actions">
+                        <a href="/product/plain-yogurt/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Plain+Yogurt&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
                 </div>
 
                 <div class="abh-menu-card">
-                    <div class="abh-menu-top">
-                        <h4>Soft Drinks</h4>
-                        <div class="abh-price">$2.49</div>
+                    <div class="abh-menu-card-top">
+                        <h4>Extra Basmati Rice</h4>
+                        <div class="abh-menu-price">$4.49</div>
                     </div>
-                    <p class="abh-menu-desc">A selection of chilled soft drinks to pair with your meal.</p>
+                    <p>A side portion of aromatic basmati rice.</p>
                     <div class="abh-menu-meta">
-                        <span>Beverage</span>
-                        <span>Cold</span>
+                        <span>Extra Side</span>
+                        <span>Freshly Prepared</span>
                     </div>
-                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
+                    <div class="abh-menu-actions">
+                        <a href="/product/extra-basmati-rice/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Extra+Basmati+Rice&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="abh-featured-combo">
+    <section class="abh-menu-section" id="starters">
         <div class="abh-container">
-            <div class="abh-featured-grid">
+            <div class="abh-menu-section-head">
                 <div>
-                    <div class="abh-section-tag" style="color:#fff;">Featured Combo</div>
-                    <h2>Family Feast Combo</h2>
-                    <p>
-                        A generous meal for sharing — ideal for family dinner, small gatherings, or a satisfying weekend treat from Anjaney’s Biryani House.
-                    </p>
-                    <a href="/order-online/" class="abh-btn">Order This Combo</a>
+                    <div class="abh-tag">Starters</div>
+                    <h3>Perfect beginnings</h3>
+                </div>
+                <p>
+                    Start your order with crispy, juicy, and flavourful favourites before moving on to the mains.
+                </p>
+            </div>
+
+            <div class="abh-menu-grid">
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Chicken 65</h4>
+                        <div class="abh-menu-price">$10.99</div>
+                    </div>
+                    <p>Crispy fried chicken tossed in spicy South Indian flavours.</p>
+                    <div class="abh-menu-meta">
+                        <span>Best Seller</span>
+                        <span>Spicy</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/chicken-65/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Chicken+65&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
                 </div>
 
-                <div class="abh-featured-box">
-                    <h3>Combo Includes</h3>
-                    <div class="abh-featured-price">$39.99</div>
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Pepper Chicken</h4>
+                        <div class="abh-menu-price">$11.99</div>
+                    </div>
+                    <p>Tender chicken tossed in black pepper and bold seasoning.</p>
+                    <div class="abh-menu-meta">
+                        <span>House Special</span>
+                        <span>Medium Spice</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/pepper-chicken/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Pepper+Chicken&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Veg Samosa</h4>
+                        <div class="abh-menu-price">$5.99</div>
+                    </div>
+                    <p>Crisp pastry filled with seasoned potatoes and peas.</p>
+                    <div class="abh-menu-meta">
+                        <span>Vegetarian</span>
+                        <span>Crispy</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/veg-samosa/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Veg+Samosa&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Chicken Pakora</h4>
+                        <div class="abh-menu-price">$9.99</div>
+                    </div>
+                    <p>Crispy chicken fritters with bold seasoning.</p>
+                    <div class="abh-menu-meta">
+                        <span>Crispy</span>
+                        <span>Popular</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/chicken-pakora/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Chicken+Pakora&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="abh-menu-section" id="veg-specials">
+        <div class="abh-container">
+            <div class="abh-menu-section-head">
+                <div>
+                    <div class="abh-tag">Veg Specials</div>
+                    <h3>Flavourful vegetarian favourites</h3>
+                </div>
+                <p>
+                    Rich and satisfying vegetarian options for guests who want bold taste and comforting meals.
+                </p>
+            </div>
+
+            <div class="abh-menu-grid">
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Vegetable Biryani</h4>
+                        <div class="abh-menu-price">$13.49</div>
+                    </div>
+                    <p>Fresh vegetables and fragrant rice cooked with house masala.</p>
+                    <div class="abh-menu-meta">
+                        <span>Vegetarian</span>
+                        <span>Popular</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/vegetable-biryani/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Vegetable+Biryani&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Paneer Biryani</h4>
+                        <div class="abh-menu-price">$14.49</div>
+                    </div>
+                    <p>Soft paneer and fragrant rice layered with warming spices.</p>
+                    <div class="abh-menu-meta">
+                        <span>Vegetarian</span>
+                        <span>Rich & Creamy</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/paneer-biryani/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Paneer+Biryani&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Chilli Paneer</h4>
+                        <div class="abh-menu-price">$11.49</div>
+                    </div>
+                    <p>Paneer tossed with peppers and a spicy savoury sauce.</p>
+                    <div class="abh-menu-meta">
+                        <span>Vegetarian</span>
+                        <span>Spicy</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/chilli-paneer/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Chilli+Paneer&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Gobi Manchurian</h4>
+                        <div class="abh-menu-price">$9.99</div>
+                    </div>
+                    <p>Crispy cauliflower in tangy and spicy sauce.</p>
+                    <div class="abh-menu-meta">
+                        <span>Vegetarian</span>
+                        <span>Crispy</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/gobi-manchurian/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Gobi+Manchurian&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Paneer Butter Masala</h4>
+                        <div class="abh-menu-price">$13.99</div>
+                    </div>
+                    <p>Creamy paneer curry with rich tomato and butter gravy.</p>
+                    <div class="abh-menu-meta">
+                        <span>Comfort Food</span>
+                        <span>Vegetarian</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/paneer-butter-masala/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Paneer+Butter+Masala&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Gobi 65</h4>
+                        <div class="abh-menu-price">$9.49</div>
+                    </div>
+                    <p>Crispy cauliflower tossed in spicy South Indian flavours.</p>
+                    <div class="abh-menu-meta">
+                        <span>Vegetarian</span>
+                        <span>South Indian Style</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/gobi-65/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Gobi+65&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="abh-menu-section" id="beverages">
+        <div class="abh-container">
+            <div class="abh-menu-section-head">
+                <div>
+                    <div class="abh-tag">Beverages</div>
+                    <h3>Refreshing drinks</h3>
+                </div>
+                <p>
+                    Complete your meal with cooling drinks, classic lassi, and warm chai.
+                </p>
+            </div>
+
+            <div class="abh-menu-grid">
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Mango Lassi</h4>
+                        <div class="abh-menu-price">$4.99</div>
+                    </div>
+                    <p>Refreshing chilled mango yogurt drink.</p>
+                    <div class="abh-menu-meta">
+                        <span>Refreshing</span>
+                        <span>Popular</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/mango-lassi/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Mango+Lassi&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Sweet Lassi</h4>
+                        <div class="abh-menu-price">$4.49</div>
+                    </div>
+                    <p>Smooth chilled yogurt drink with a sweet finish.</p>
+                    <div class="abh-menu-meta">
+                        <span>Classic</span>
+                        <span>Cooling</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/sweet-lassi/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Sweet+Lassi&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Salt Lassi</h4>
+                        <div class="abh-menu-price">$4.49</div>
+                    </div>
+                    <p>Classic salted yogurt drink served chilled.</p>
+                    <div class="abh-menu-meta">
+                        <span>Savoury</span>
+                        <span>Refreshing</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/salt-lassi/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Salt+Lassi&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Masala Chai</h4>
+                        <div class="abh-menu-price">$2.99</div>
+                    </div>
+                    <p>Indian-style tea brewed with warming spices.</p>
+                    <div class="abh-menu-meta">
+                        <span>Hot Beverage</span>
+                        <span>Traditional</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/masala-chai/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Masala+Chai&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Soft Drink Can</h4>
+                        <div class="abh-menu-price">$2.49</div>
+                    </div>
+                    <p>A chilled soft drink to enjoy with your order.</p>
+                    <div class="abh-menu-meta">
+                        <span>Cold</span>
+                        <span>Quick Add-On</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/soft-drink-can/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Soft+Drink+Can&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="abh-menu-section" id="desserts" style="padding-bottom: 72px;">
+        <div class="abh-container">
+            <div class="abh-menu-section-head">
+                <div>
+                    <div class="abh-tag">Desserts</div>
+                    <h3>Sweet endings</h3>
+                </div>
+                <p>
+                    Traditional dessert favourites to finish your meal on a rich and satisfying note.
+                </p>
+            </div>
+
+            <div class="abh-menu-grid">
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Gulab Jamun</h4>
+                        <div class="abh-menu-price">$4.99</div>
+                    </div>
+                    <p>Soft milk-solid dumplings soaked in sweet syrup.</p>
+                    <div class="abh-menu-meta">
+                        <span>Traditional</span>
+                        <span>Sweet Favourite</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/gulab-jamun/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Gulab+Jamun&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Double Ka Meetha</h4>
+                        <div class="abh-menu-price">$5.99</div>
+                    </div>
+                    <p>Traditional bread dessert with rich sweetness.</p>
+                    <div class="abh-menu-meta">
+                        <span>Classic Dessert</span>
+                        <span>House Style</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/double-ka-meetha/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Double+Ka+Meetha&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Kheer</h4>
+                        <div class="abh-menu-price">$4.99</div>
+                    </div>
+                    <p>Creamy rice pudding with traditional flavour.</p>
+                    <div class="abh-menu-meta">
+                        <span>Comforting</span>
+                        <span>Traditional</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/kheer/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Kheer&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="abh-menu-card">
+                    <div class="abh-menu-card-top">
+                        <h4>Rasmalai</h4>
+                        <div class="abh-menu-price">$5.49</div>
+                    </div>
+                    <p>Soft milk dumplings served in sweet creamy milk.</p>
+                    <div class="abh-menu-meta">
+                        <span>Rich Dessert</span>
+                        <span>Popular</span>
+                    </div>
+                    <div class="abh-menu-actions">
+                        <a href="/product/rasmalai/" class="abh-btn-dark">View Item</a>
+                        <a href="/shop/?s=Rasmalai&post_type=product" class="abh-btn-dark">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="abh-menu-highlight">
+        <div class="abh-container">
+            <div class="abh-menu-highlight-grid">
+                <div>
+                    <div class="abh-tag" style="color:#fff;">Online Ordering</div>
+                    <h2>Ready to order your favourites?</h2>
+                    <p>
+                        Go directly to our shop page to browse all available menu items, add products to your cart, and
+                        continue to checkout.
+                    </p>
+                    <p>
+                        You can also book a table for dine-in if you prefer to enjoy the full restaurant experience.
+                    </p>
+                    <a href="/shop/" class="abh-btn">Go to Shop</a>
+                </div>
+
+                <div class="abh-menu-highlight-box">
+                    <h3>Quick Links</h3>
                     <ul>
-                        <li>1 Chicken Biryani</li>
-                        <li>1 Beef or Veg Biryani</li>
-                        <li>2 Starters</li>
-                        <li>2 Drinks</li>
-                        <li>Raita & Salan</li>
+                        <li><a href="/shop/?product_cat=biryani-specials" style="color:#fff;">Shop Biryani Specials</a>
+                        </li>
+                        <li><a href="/shop/?product_cat=sides" style="color:#fff;">Shop Sides</a></li>
+                        <li><a href="/shop/?product_cat=starters" style="color:#fff;">Shop Starters</a></li>
+                        <li><a href="/shop/?product_cat=veg-specials" style="color:#fff;">Shop Veg Specials</a></li>
+                        <li><a href="/shop/?product_cat=beverages" style="color:#fff;">Shop Beverages</a></li>
+                        <li><a href="/shop/?product_cat=desserts" style="color:#fff;">Shop Desserts</a></li>
                     </ul>
-                    <a href="/reservations/" class="abh-btn-outline">Reserve for Dine-In</a>
                 </div>
             </div>
         </div>
@@ -771,15 +1108,17 @@
         <div class="abh-container">
             <div class="abh-menu-cta-inner">
                 <div>
-                    <h2>Ready to enjoy Anjaney’s Biryani House?</h2>
+                    <h2>Order online or plan your dine-in visit</h2>
                     <p>
-                        Place your order online for pickup or reserve your table and enjoy a warm dine-in experience with us.
+                        Browse the full shop, add items to your cart, continue to checkout, or reserve your table for a
+                        relaxed dine-in experience.
                     </p>
                 </div>
 
                 <div class="abh-menu-cta-actions">
-                    <a href="/order-online/" class="abh-btn">Order Online</a>
-                    <a href="/reservations/" class="abh-btn-outline">Book a Table</a>
+                    <a href="/shop/" class="abh-btn">Order Online</a>
+                    <a href="/cart/" class="abh-btn-outline">View Cart</a>
+                    <a href="/checkout/" class="abh-btn-outline">Checkout</a>
                 </div>
             </div>
         </div>

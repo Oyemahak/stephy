@@ -1,0 +1,169 @@
+<style>
+    .abh-checkout-page,
+    .abh-checkout-page * {
+        box-sizing: border-box;
+    }
+
+    .abh-checkout-page {
+        --abh-dark: #07181c;
+        --abh-dark-2: #10262b;
+        --abh-light: #f7f5ef;
+        --abh-white: #ffffff;
+        --abh-text: #203238;
+        --abh-muted: #5e6f75;
+        --abh-gold: #f2a116;
+        --abh-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+        background: var(--abh-light);
+        color: var(--abh-text);
+        font-family: "Inter", Arial, sans-serif;
+    }
+
+    .abh-checkout-page .abh-container {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+    }
+
+    .abh-checkout-page h1,
+    .abh-checkout-page h2,
+    .abh-checkout-page h3,
+    .abh-checkout-page h4 {
+        margin: 0;
+        font-family: "Playfair Display", Georgia, serif;
+        line-height: 1.08;
+        color: #0e1d21;
+    }
+
+    .abh-checkout-page p {
+        margin: 0;
+        line-height: 1.75;
+    }
+
+    .abh-checkout-page .abh-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 14px;
+        color: #2b3c42;
+        margin-bottom: 18px;
+    }
+
+    .abh-checkout-page .abh-tag::before,
+    .abh-checkout-page .abh-tag::after {
+        content: "";
+        width: 34px;
+        height: 2px;
+        background: var(--abh-gold);
+        display: inline-block;
+    }
+
+    .abh-checkout-hero {
+        position: relative;
+        padding: 120px 0 110px;
+        background:
+            linear-gradient(rgba(7, 24, 28, 0.74), rgba(7, 24, 28, 0.74)),
+            url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        color: #fff;
+    }
+
+    .abh-checkout-hero .abh-hero-content {
+        max-width: 760px;
+    }
+
+    .abh-checkout-hero h1 {
+        color: #fff;
+        font-size: clamp(44px, 6vw, 82px);
+        margin-bottom: 18px;
+    }
+
+    .abh-checkout-hero p {
+        max-width: 690px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 18px;
+        margin-bottom: 28px;
+    }
+
+    .abh-checkout-info {
+        padding: 90px 0 30px;
+        background: var(--abh-light);
+    }
+
+    .abh-checkout-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .abh-checkout-card {
+        background: #fff;
+        border: 1px solid #efe8dc;
+        border-radius: 20px;
+        padding: 30px 26px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+    }
+
+    .abh-checkout-card h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .abh-checkout-card p {
+        color: var(--abh-muted);
+    }
+
+    @media (max-width: 1024px) {
+        .abh-checkout-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .abh-checkout-hero {
+            padding: 95px 0 85px;
+        }
+
+        .abh-checkout-hero p {
+            font-size: 16px;
+        }
+
+        .abh-checkout-info {
+            padding: 72px 0 22px;
+        }
+    }
+</style>
+
+<div class="abh-checkout-page">
+    <section class="abh-checkout-hero">
+        <div class="abh-container">
+            <div class="abh-hero-content">
+                <div class="abh-tag">Checkout</div>
+                <h1>Complete your order in a few simple steps</h1>
+                <p>
+                    Enter your billing details, review your items, and place your order. We are keeping payment simple
+                    with cash on delivery.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="abh-checkout-info">
+        <div class="abh-container">
+            <div class="abh-checkout-grid">
+                <div class="abh-checkout-card">
+                    <h3>Easy Details</h3>
+                    <p>Fill in your name, phone number, email, and address details clearly.</p>
+                </div>
+                <div class="abh-checkout-card">
+                    <h3>Cash on Delivery</h3>
+                    <p>Your store can accept the order now and payment can be collected at delivery or pickup.</p>
+                </div>
+                <div class="abh-checkout-card">
+                    <h3>Email Updates</h3>
+                    <p>The customer and the restaurant can both receive order confirmation emails after checkout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</div>
