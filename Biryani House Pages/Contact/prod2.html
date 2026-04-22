@@ -1,0 +1,141 @@
+<style>
+  .abh-contact-bottom-wrap,
+  .abh-contact-bottom-wrap * {
+    box-sizing: border-box;
+  }
+
+  .abh-contact-bottom-wrap {
+    background: #f7f5ef;
+    font-family: "Inter", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .abh-contact-bottom-wrap .abh-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .abh-contact-bottom-wrap h2 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    line-height: 1.08;
+  }
+
+  .abh-contact-bottom-wrap p {
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  .abh-contact-cta {
+    padding: 80px 0;
+    background:
+      linear-gradient(rgba(13,35,40,0.88), rgba(13,35,40,0.88)),
+      url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    text-align: center;
+    color: #fff;
+  }
+
+  .abh-contact-cta-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 14px;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 18px;
+  }
+
+  .abh-contact-cta-tag::before,
+  .abh-contact-cta-tag::after {
+    content: "";
+    width: 34px;
+    height: 2px;
+    background: #f2a116;
+    display: inline-block;
+  }
+
+  .abh-contact-cta h2 {
+    color: #fff;
+    font-size: clamp(36px, 5vw, 64px);
+    margin-bottom: 14px;
+  }
+
+  .abh-contact-cta p {
+    max-width: 760px;
+    margin: 0 auto 24px;
+    color: rgba(255,255,255,0.86);
+    font-size: 17px;
+  }
+
+  .abh-contact-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .abh-contact-cta-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+  }
+
+  .abh-contact-cta-actions .abh-btn {
+    background: #f2a116;
+    color: #fff;
+  }
+
+  .abh-contact-cta-actions .abh-btn-outline {
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #fff;
+  }
+
+  .abh-contact-cta-actions .abh-btn:hover,
+  .abh-contact-cta-actions .abh-btn-outline:hover {
+    transform: translateY(-2px);
+    opacity: 0.96;
+  }
+
+  @media (max-width: 767px) {
+    .abh-contact-cta {
+      padding: 70px 0;
+    }
+
+    .abh-contact-cta-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .abh-contact-cta-actions a {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+</style>
+
+<div class="abh-contact-bottom-wrap">
+  <section class="abh-contact-cta">
+    <div class="abh-container">
+      <div class="abh-contact-cta-tag">Visit & Connect</div>
+      <h2>We’d love to hear from you</h2>
+      <p>
+        Explore our menu, reserve your table, or contact us directly for questions about dining, takeout, or your next visit to Anjaney’s Biryani House.
+      </p>
+      <div class="abh-contact-cta-actions">
+        <a href="/menu" class="abh-btn">Explore Menu</a>
+        <a href="/reservations" class="abh-btn-outline">Reserve Now</a>
+      </div>
+    </div>
+  </section>
+</div>

@@ -6,21 +6,18 @@
 
   .abh-res-page {
     --abh-dark: #07181c;
-    --abh-dark-2: #10262b;
     --abh-light: #f7f5ef;
-    --abh-white: #ffffff;
     --abh-text: #203238;
     --abh-muted: #5e6f75;
     --abh-gold: #f2a116;
-    --abh-border: rgba(0,0,0,0.08);
     --abh-shadow: 0 20px 45px rgba(0,0,0,0.08);
     background: var(--abh-light);
     color: var(--abh-text);
     font-family: "Inter", Arial, sans-serif;
-    overflow: hidden;
   }
 
-  .abh-res-page .abh-container {
+  .abh-res-page .abh-container,
+  .rtb-booking-form {
     width: min(1180px, calc(100% - 40px));
     margin: 0 auto;
   }
@@ -108,7 +105,6 @@
     color: var(--abh-gold);
   }
 
-  /* HERO */
   .abh-res-hero {
     position: relative;
     padding: 120px 0 110px;
@@ -141,9 +137,8 @@
     flex-wrap: wrap;
   }
 
-  /* INTRO CARDS */
   .abh-res-info {
-    padding: 90px 0 35px;
+    padding: 90px 0 34px;
     background: var(--abh-light);
   }
 
@@ -187,207 +182,123 @@
     color: var(--abh-muted);
   }
 
-  /* MAIN BOOKING SECTION */
-  .abh-res-main {
-    padding: 35px 0 95px;
-    background: var(--abh-light);
+  /* FORM STYLING */
+  .rtb-booking-form {
+    width: min(1180px, calc(100% - 40px)) !important;
+    margin: 0 auto !important;
+    padding: 0 0 80px !important;
+    font-family: "Inter", Arial, sans-serif !important;
   }
 
-  .abh-res-main-grid {
-    display: grid;
-    grid-template-columns: 1.08fr 0.92fr;
-    gap: 32px;
-    align-items: start;
+  .rtb-booking-form > p:first-child {
+    margin: 0 0 22px !important;
   }
 
-  .abh-res-form-wrap,
-  .abh-res-side {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--abh-shadow);
+  .rtb-booking-form form {
+    background: #fff !important;
+    border: 1px solid #efe8dc !important;
+    border-radius: 20px !important;
+    box-shadow: var(--abh-shadow) !important;
+    padding: 30px !important;
+    width: 100% !important;
   }
 
-  .abh-res-form-wrap {
-    background: #fff;
-    border: 1px solid #efe8dc;
-    padding: 38px 34px;
+  .rtb-booking-form fieldset {
+    border: 1px solid #ece4d8 !important;
+    background: #fcfaf6 !important;
+    border-radius: 16px !important;
+    padding: 22px 18px 18px !important;
+    margin: 0 0 22px !important;
   }
 
-  .abh-res-form-wrap h2 {
-    font-size: clamp(34px, 4vw, 54px);
-    margin-bottom: 14px;
+  .rtb-booking-form legend {
+    padding: 0 12px !important;
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-size: 28px !important;
+    color: #102126 !important;
+    line-height: 1.1 !important;
   }
 
-  .abh-res-form-wrap > p {
-    color: var(--abh-muted);
-    margin-bottom: 24px;
+  .rtb-booking-form fieldset p {
+    margin: 0 0 16px !important;
   }
 
-  .abh-shortcode-box {
-    border: 1px dashed #d8cfc1;
-    background: #fcfaf6;
-    border-radius: 16px;
-    padding: 26px 22px;
+  .rtb-booking-form label {
+    display: block !important;
+    margin-bottom: 8px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #22353b !important;
   }
 
-  .abh-shortcode-label {
-    font-size: 13px;
-    font-weight: 700;
-    color: #7a6a4f;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 10px;
+  .rtb-booking-form input[type="text"],
+  .rtb-booking-form input[type="email"],
+  .rtb-booking-form input[type="tel"],
+  .rtb-booking-form input[type="number"],
+  .rtb-booking-form input[type="date"],
+  .rtb-booking-form input[type="time"],
+  .rtb-booking-form select,
+  .rtb-booking-form textarea {
+    width: 100% !important;
+    min-height: 54px !important;
+    border: 1px solid #ddd6cb !important;
+    background: #fff !important;
+    color: #1d3036 !important;
+    border-radius: 10px !important;
+    padding: 12px 14px !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 15px !important;
+    box-shadow: none !important;
+    outline: none !important;
   }
 
-  .abh-shortcode-code {
-    display: block;
-    background: #fff;
-    border: 1px solid #eadfcd;
-    border-radius: 10px;
-    padding: 14px 16px;
-    color: #1d3036;
-    font-family: monospace;
-    font-size: 15px;
-    word-break: break-word;
-    margin-bottom: 14px;
+  .rtb-booking-form textarea {
+    min-height: 140px !important;
+    resize: vertical !important;
   }
 
-  .abh-shortcode-help {
-    color: var(--abh-muted);
-    font-size: 15px;
-    line-height: 1.75;
+  .rtb-booking-form input:focus,
+  .rtb-booking-form select:focus,
+  .rtb-booking-form textarea:focus {
+    border-color: var(--abh-gold) !important;
+    box-shadow: 0 0 0 3px rgba(242,161,22,0.12) !important;
   }
 
-  .abh-res-side {
-    padding: 34px 28px;
-    background:
-      linear-gradient(rgba(7,24,28,0.93), rgba(7,24,28,0.93)),
-      url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-    color: #fff;
+  .rtb-booking-form .add-message,
+  .rtb-booking-form a {
+    color: var(--abh-gold) !important;
   }
 
-  .abh-res-side h3 {
-    color: #fff;
-    font-size: 34px;
-    margin-bottom: 12px;
+  .rtb-booking-form button,
+  .rtb-booking-form input[type="submit"],
+  .rtb-booking-form .button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 52px !important;
+    padding: 0 28px !important;
+    border: 0 !important;
+    border-radius: 6px !important;
+    background: var(--abh-gold) !important;
+    color: #fff !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
   }
 
-  .abh-res-side > p {
-    color: rgba(255,255,255,0.82);
-    margin-bottom: 26px;
-  }
-
-  .abh-side-block {
-    padding: 0 0 22px;
-    margin-bottom: 22px;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-  }
-
-  .abh-side-block:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: 0;
-  }
-
-  .abh-side-block h4 {
-    color: #fff;
-    font-size: 22px;
-    margin-bottom: 8px;
-  }
-
-  .abh-side-block p,
-  .abh-side-block a {
-    color: rgba(255,255,255,0.84);
-    text-decoration: none;
-    line-height: 1.8;
-  }
-
-  .abh-side-block a:hover {
-    color: var(--abh-gold);
-  }
-
-  /* POLICIES */
-  .abh-res-policies {
-    padding: 0 0 95px;
-    background: var(--abh-light);
-  }
-
-  .abh-res-policies-head {
-    text-align: center;
-    max-width: 840px;
-    margin: 0 auto 42px;
-  }
-
-  .abh-res-policies-head h2 {
-    font-size: clamp(34px, 4vw, 58px);
-    margin-bottom: 14px;
-  }
-
-  .abh-res-policies-head p {
-    color: var(--abh-muted);
-    font-size: 17px;
-  }
-
-  .abh-res-policies-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-  }
-
-  .abh-policy-card {
-    background: #fff;
-    border: 1px solid #efe8dc;
-    border-radius: 18px;
-    padding: 26px 22px;
-    box-shadow: 0 12px 26px rgba(0,0,0,0.04);
-  }
-
-  .abh-policy-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .abh-policy-card p {
-    color: var(--abh-muted);
-  }
-
-  /* BOTTOM CTA */
-  .abh-res-bottom-cta {
-    padding: 80px 0;
-    background:
-      linear-gradient(rgba(13,35,40,0.88), rgba(13,35,40,0.88)),
-      url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-    text-align: center;
-    color: #fff;
-  }
-
-  .abh-res-bottom-cta h2 {
-    color: #fff;
-    font-size: clamp(36px, 5vw, 64px);
-    margin-bottom: 14px;
-  }
-
-  .abh-res-bottom-cta p {
-    max-width: 760px;
-    margin: 0 auto 24px;
-    color: rgba(255,255,255,0.86);
-    font-size: 17px;
-  }
-
-  .abh-res-bottom-actions {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
+  .rtb-booking-form button:hover,
+  .rtb-booking-form input[type="submit"]:hover,
+  .rtb-booking-form .button:hover {
+    transform: translateY(-2px);
+    opacity: 0.96;
   }
 
   @media (max-width: 1024px) {
-    .abh-res-info-grid,
-    .abh-res-policies-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .abh-res-main-grid {
+    .abh-res-info-grid {
       grid-template-columns: 1fr;
     }
   }
@@ -405,33 +316,25 @@
       padding: 72px 0 28px;
     }
 
-    .abh-res-main {
-      padding: 28px 0 72px;
+    .rtb-booking-form {
+      padding: 0 0 72px !important;
     }
 
-    .abh-res-form-wrap,
-    .abh-res-side {
-      padding: 28px 22px;
+    .rtb-booking-form form {
+      padding: 20px !important;
     }
 
-    .abh-res-policies {
-      padding: 0 0 72px;
+    .rtb-booking-form fieldset {
+      padding: 18px 14px 14px !important;
     }
 
-    .abh-res-policies-grid,
-    .abh-res-info-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .abh-res-bottom-cta {
-      padding: 70px 0;
+    .rtb-booking-form legend {
+      font-size: 24px !important;
     }
   }
 </style>
 
 <div class="abh-res-page">
-
-  <!-- HERO -->
   <section class="abh-res-hero">
     <div class="abh-container">
       <div class="abh-hero-content">
@@ -448,11 +351,9 @@
     </div>
   </section>
 
-  <!-- INFO CARDS -->
   <section class="abh-res-info">
     <div class="abh-container">
       <div class="abh-res-info-grid">
-
         <div class="abh-res-card">
           <div class="abh-res-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -473,7 +374,7 @@
             </svg>
           </div>
           <h3>Easy Booking</h3>
-          <p>Choose your preferred date, time, and party size through our reservation form.</p>
+          <p>Choose your preferred date, time, and party size using the form below.</p>
         </div>
 
         <div class="abh-res-card">
@@ -483,111 +384,9 @@
             </svg>
           </div>
           <h3>Need Help?</h3>
-          <p>Call us directly at <strong>(647) 000-0000</strong> for assistance with bookings.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- MAIN -->
-  <section class="abh-res-main">
-    <div class="abh-container">
-      <div class="abh-res-main-grid">
-
-        <div class="abh-res-form-wrap">
-          <div class="abh-tag">Book Online</div>
-          <h2>Reserve your dining experience</h2>
-          <p>
-            Add your restaurant booking form here using the Five Star Restaurant Reservations shortcode.
-          </p>
-
-          <div class="abh-shortcode-box">
-            <div class="abh-shortcode-label">Paste plugin shortcode here</div>
-            <code class="abh-shortcode-code">[booking-form]</code>
-            <div class="abh-shortcode-help">
-              Replace this placeholder with the actual Five Star Restaurant Reservations shortcode in Elementor using a Shortcode widget, or paste the real shortcode here if the plugin provides one.
-            </div>
-          </div>
-        </div>
-
-        <div class="abh-res-side">
-          <div class="abh-tag" style="color:#fff;">Booking Details</div>
-          <h3>Make your visit smooth and memorable</h3>
-          <p>
-            Plan ahead and reserve your table for family meals, casual dinners, and special gatherings at Anjaney’s Biryani House.
-          </p>
-
-          <div class="abh-side-block">
-            <h4>Reservation Hours</h4>
-            <p>Monday – Friday: 11:00 AM – 10:00 PM</p>
-            <p>Saturday – Sunday: 12:00 PM – 11:00 PM</p>
-          </div>
-
-          <div class="abh-side-block">
-            <h4>Party Size</h4>
-            <p>Reservations available for parties from 1 to 8 guests.</p>
-          </div>
-
-          <div class="abh-side-block">
-            <h4>Contact</h4>
-            <p><a href="tel:+16470000000">(647) 000-0000</a></p>
-            <p><a href="mailto:info@anjaney.ca">info@anjaney.ca</a></p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- POLICIES -->
-  <section class="abh-res-policies">
-    <div class="abh-container">
-      <div class="abh-res-policies-head">
-        <div class="abh-tag">Reservation Notes</div>
-        <h2>Helpful information before you book</h2>
-        <p>
-          Keep these quick details in mind so your dining experience feels simple, organized, and enjoyable.
-        </p>
-      </div>
-
-      <div class="abh-res-policies-grid">
-        <div class="abh-policy-card">
-          <h3>Advance Booking</h3>
-          <p>Reservations can be made in advance based on available dates and times.</p>
-        </div>
-
-        <div class="abh-policy-card">
-          <h3>Arrival Time</h3>
-          <p>Please arrive on time so we can provide the best possible dining experience.</p>
-        </div>
-
-        <div class="abh-policy-card">
-          <h3>Special Requests</h3>
-          <p>You may include special notes or preferences when making your reservation.</p>
-        </div>
-
-        <div class="abh-policy-card">
-          <h3>Need Assistance</h3>
-          <p>If you have questions about availability, call us directly and we’ll be happy to help.</p>
+          <p>Call us at <strong>(647) 000-0000</strong> if you need help with your reservation.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- BOTTOM CTA -->
-  <section class="abh-res-bottom-cta">
-    <div class="abh-container">
-      <div class="abh-tag" style="color:#fff;">Plan Your Visit</div>
-      <h2>Enjoy authentic flavour in a welcoming setting</h2>
-      <p>
-        Reserve your table today or explore the menu before your visit to Anjaney’s Biryani House.
-      </p>
-      <div class="abh-res-bottom-actions">
-        <a href="/menu" class="abh-btn">Explore Menu</a>
-        <a href="/contact" class="abh-btn-outline">Contact Us</a>
-      </div>
-    </div>
-  </section>
-
 </div>

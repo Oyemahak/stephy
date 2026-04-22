@@ -6,18 +6,14 @@
 
   .abh-res-page {
     --abh-dark: #07181c;
-    --abh-dark-2: #10262b;
     --abh-light: #f7f5ef;
-    --abh-white: #ffffff;
     --abh-text: #203238;
     --abh-muted: #5e6f75;
     --abh-gold: #f2a116;
-    --abh-border: rgba(0,0,0,0.08);
     --abh-shadow: 0 20px 45px rgba(0,0,0,0.08);
     background: var(--abh-light);
     color: var(--abh-text);
     font-family: "Inter", Arial, sans-serif;
-    overflow: hidden;
   }
 
   .abh-res-page .abh-container,
@@ -142,7 +138,7 @@
   }
 
   .abh-res-info {
-    padding: 90px 0 32px;
+    padding: 90px 0 34px;
     background: var(--abh-light);
   }
 
@@ -186,41 +182,50 @@
     color: var(--abh-muted);
   }
 
-  /* FIVE STAR BOOKING FORM STYLING */
+  /* FORM STYLING */
   .rtb-booking-form {
-    padding: 8px 0 90px;
-    font-family: "Inter", Arial, sans-serif;
+    width: min(1180px, calc(100% - 40px)) !important;
+    margin: 0 auto !important;
+    padding: 0 0 80px !important;
+    font-family: "Inter", Arial, sans-serif !important;
+  }
+
+  .rtb-booking-form > p:first-child {
+    margin: 0 0 22px !important;
   }
 
   .rtb-booking-form form {
-    background: #fff;
-    border: 1px solid #efe8dc;
-    border-radius: 20px;
-    box-shadow: var(--abh-shadow);
-    padding: 36px 32px;
+    background: #fff !important;
+    box-shadow: var(--abh-shadow) !important;
+    width: 100% !important;
   }
 
   .rtb-booking-form fieldset {
     border: 1px solid #ece4d8 !important;
-    background: #fcfaf6;
-    border-radius: 16px;
-    padding: 22px 18px 18px;
+    background: #fcfaf6 !important;
+    border-radius: 16px !important;
+    padding: 22px 18px 18px !important;
     margin: 0 0 22px !important;
   }
 
   .rtb-booking-form legend {
-    padding: 0 10px;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 28px;
-    color: #102126;
+    padding: 0 12px !important;
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-size: 28px !important;
+    color: #102126 !important;
+    line-height: 1.1 !important;
+  }
+
+  .rtb-booking-form fieldset p {
+    margin: 0 0 16px !important;
   }
 
   .rtb-booking-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #22353b;
+    display: block !important;
+    margin-bottom: 8px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #22353b !important;
   }
 
   .rtb-booking-form input[type="text"],
@@ -231,56 +236,54 @@
   .rtb-booking-form input[type="time"],
   .rtb-booking-form select,
   .rtb-booking-form textarea {
-    width: 100%;
-    min-height: 52px;
-    border: 1px solid #ddd6cb;
-    background: #fff;
-    color: #1d3036;
-    border-radius: 10px;
-    padding: 12px 14px;
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 15px;
-    outline: none;
-    transition: 0.2s ease;
+    width: 100% !important;
+    min-height: 54px !important;
+    border: 1px solid #ddd6cb !important;
+    background: #fff !important;
+    color: #1d3036 !important;
+    border-radius: 10px !important;
+    padding: 12px 14px !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 15px !important;
+    box-shadow: none !important;
+    outline: none !important;
   }
 
   .rtb-booking-form textarea {
-    min-height: 130px;
-    resize: vertical;
+    min-height: 140px !important;
+    resize: vertical !important;
   }
 
   .rtb-booking-form input:focus,
   .rtb-booking-form select:focus,
   .rtb-booking-form textarea:focus {
-    border-color: var(--abh-gold);
-    box-shadow: 0 0 0 3px rgba(242,161,22,0.12);
+    border-color: var(--abh-gold) !important;
+    box-shadow: 0 0 0 3px rgba(242,161,22,0.12) !important;
   }
 
   .rtb-booking-form .add-message,
-  .rtb-booking-form .rtb-message-link,
   .rtb-booking-form a {
-    color: var(--abh-gold);
+    color: var(--abh-gold) !important;
   }
 
   .rtb-booking-form button,
   .rtb-booking-form input[type="submit"],
   .rtb-booking-form .button {
     display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    min-height: 52px;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 52px !important;
     padding: 0 28px !important;
     border: 0 !important;
     border-radius: 6px !important;
-    background: var(--abh-gold) !important;
-    color: #fff !important;
+    background: #f2a116 !important;
+    color: var(--abh-dark) !important;
     font-family: "Inter", Arial, sans-serif !important;
     font-size: 14px !important;
     font-weight: 700 !important;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    transition: 0.25s ease;
-    cursor: pointer;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
     box-shadow: none !important;
   }
 
@@ -289,35 +292,6 @@
   .rtb-booking-form .button:hover {
     transform: translateY(-2px);
     opacity: 0.96;
-  }
-
-  .rtb-booking-form .booking-request-button,
-  .rtb-booking-form .request-booking,
-  .rtb-booking-form .rtb-submit,
-  .rtb-booking-form .submit {
-    margin-top: 8px;
-  }
-
-  .rtb-booking-form .rtb-notice,
-  .rtb-booking-form .rtb-error,
-  .rtb-booking-form .message,
-  .rtb-booking-form .error {
-    border-radius: 10px;
-    padding: 12px 14px;
-    margin-bottom: 16px;
-    font-size: 14px;
-  }
-
-  .rtb-booking-form .rtb-notice,
-  .rtb-booking-form .message {
-    background: #eef8f1;
-    color: #1f5d34;
-  }
-
-  .rtb-booking-form .rtb-error,
-  .rtb-booking-form .error {
-    background: #fff1f1;
-    color: #9d2f2f;
   }
 
   @media (max-width: 1024px) {
@@ -340,19 +314,19 @@
     }
 
     .rtb-booking-form {
-      padding: 0 0 72px;
+      padding: 0 0 72px !important;
     }
 
     .rtb-booking-form form {
-      padding: 24px 20px;
+      padding: 20px !important;
     }
 
     .rtb-booking-form fieldset {
-      padding: 18px 14px 14px;
+      padding: 18px 14px 14px !important;
     }
 
     .rtb-booking-form legend {
-      font-size: 24px;
+      font-size: 24px !important;
     }
   }
 </style>
