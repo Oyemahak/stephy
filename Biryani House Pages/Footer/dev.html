@@ -7,7 +7,9 @@
   .abh-footer-wrap {
     --abh-dark: #07181c;
     --abh-dark-2: #123038;
+    --abh-dark-3: #03171b;
     --abh-accent: #f2a116;
+    --abh-accent-dark: #d88c0d;
     --abh-heading: #ffffff;
     --abh-text: rgba(255, 255, 255, 0.82);
     --abh-muted: rgba(255, 255, 255, 0.62);
@@ -17,6 +19,7 @@
     margin: 0;
     padding: 0;
     font-family: "Inter", Arial, sans-serif;
+    overflow: hidden;
   }
 
   .abh-footer-wrap a {
@@ -30,7 +33,7 @@
 
   .abh-footer-cta {
     background: linear-gradient(135deg, #123038 0%, #173840 100%);
-    padding: 48px 0;
+    padding: 52px 0;
     margin: 0;
   }
 
@@ -72,15 +75,16 @@
     font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(34px, 4.2vw, 64px);
     line-height: 1.05;
+    letter-spacing: -0.02em;
   }
 
   .abh-footer-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 52px;
+    min-height: 54px;
     padding: 0 30px;
-    border-radius: 6px;
+    border-radius: 8px;
     background: var(--abh-accent);
     color: #fff;
     font-family: "Inter", Arial, sans-serif;
@@ -94,12 +98,13 @@
 
   .abh-footer-btn:hover {
     transform: translateY(-2px);
-    opacity: 0.96;
+    background: var(--abh-accent-dark);
+    color: #fff;
   }
 
   .abh-footer-main {
-    background: #03171b;
-    padding: 42px 0 24px;
+    background: var(--abh-dark-3);
+    padding: 44px 0 24px;
     margin: 0;
   }
 
@@ -112,25 +117,21 @@
   }
 
   .abh-footer-logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 16px;
   }
 
-  .abh-footer-logo-mark {
-    width: 42px;
-    height: 42px;
-    flex: 0 0 42px;
+  .abh-footer-logo a {
+    display: inline-flex;
+    align-items: center;
   }
 
-  .abh-footer-logo-text {
-    color: var(--abh-heading);
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.05;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+  .abh-footer-logo img {
+    width: auto;
+    height: 64px;
+    max-width: 240px;
+    object-fit: contain;
+    display: block;
   }
 
   .abh-footer-social {
@@ -141,8 +142,8 @@
   }
 
   .abh-footer-social a {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border: 1px solid rgba(255,255,255,0.16);
     border-radius: 50%;
     display: inline-flex;
@@ -157,6 +158,7 @@
     background: var(--abh-accent);
     border-color: var(--abh-accent);
     transform: translateY(-2px);
+    color: #fff;
   }
 
   .abh-footer-divider,
@@ -180,8 +182,9 @@
     margin: 0 0 18px;
     color: var(--abh-heading);
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.2;
+    letter-spacing: -0.01em;
   }
 
   .abh-footer-col p,
@@ -200,7 +203,7 @@
   .abh-footer-link {
     display: inline-block;
     margin-top: 18px;
-    color: var(--abh-accent);
+    color: var(--abh-accent) !important;
     font-weight: 700;
   }
 
@@ -258,16 +261,26 @@
   @media (max-width: 1024px) {
     .abh-footer-grid {
       grid-template-columns: 1fr 1fr;
+      gap: 30px;
     }
 
     .abh-footer-col:last-child {
       grid-column: 1 / -1;
     }
+
+    .abh-footer-logo img {
+      height: 58px;
+      max-width: 220px;
+    }
   }
 
   @media (max-width: 767px) {
+    .abh-footer-wrap .abh-container {
+      width: min(100%, calc(100% - 24px));
+    }
+
     .abh-footer-cta {
-      padding: 34px 0;
+      padding: 36px 0;
     }
 
     .abh-footer-main {
@@ -278,6 +291,11 @@
       flex-direction: column;
       align-items: flex-start;
       padding-bottom: 24px;
+    }
+
+    .abh-footer-logo img {
+      height: 50px;
+      max-width: 180px;
     }
 
     .abh-footer-grid {
@@ -296,6 +314,15 @@
 
     .abh-footer-btn {
       width: 100%;
+    }
+
+    .abh-footer-social {
+      gap: 12px;
+    }
+
+    .abh-footer-social a {
+      width: 40px;
+      height: 40px;
     }
   }
 </style>
@@ -320,9 +347,9 @@
 
       <div class="abh-footer-brand-row">
         <div class="abh-footer-logo">
-          <div class="abh-footer-logo-text">
-            Anjaney’s<br>Biryani House
-          </div>
+          <a href="/" aria-label="Anjaney's Biriyani House Home">
+            <img src="https://anjaney.ca/wp-content/uploads/2026/04/Logo.jpeg" alt="Anjaney's Biriyani House Logo">
+          </a>
         </div>
 
         <div class="abh-footer-social">
@@ -341,7 +368,7 @@
             </svg>
           </a>
 
-          <a href="mailto:info@anjaney.ca" aria-label="Email">
+          <a href="mailto:anjaneybiryanihouse@gmail.com" aria-label="Email">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 6H20V18H4V6Z" stroke="currentColor" stroke-width="2"/>
               <path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="2"/>
@@ -356,7 +383,7 @@
         <div class="abh-footer-col abh-footer-about">
           <h3>About Us</h3>
           <p>
-            Anjaney’s Biryani House brings together authentic biryani, rich spices, comforting flavours, and warm hospitality. Our goal is to offer a satisfying dine-in and takeout experience that feels both memorable and welcoming.
+            Anjaney’s Biryani House brings together authentic biryani, rich spices, comforting flavours, and warm hospitality. Our goal is to offer a satisfying dine-in and takeout experience that feels memorable, welcoming, and full of flavour.
           </p>
           <a class="abh-footer-link" href="/about">Read More</a>
         </div>
@@ -369,7 +396,7 @@
           </p>
 
           <a class="abh-footer-phone" href="tel:+16470000000">(647) 000-0000</a><br>
-          <a class="abh-footer-email" href="mailto:info@anjaney.ca">info@anjaney.ca</a>
+          <a class="abh-footer-email" href="mailto:anjaneybiryanihouse@gmail.com">anjaneybiryanihouse@gmail.com</a>
         </div>
 
         <div class="abh-footer-col">

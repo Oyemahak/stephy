@@ -1,299 +1,375 @@
 <style>
-  .abh-custom-header,
-  .abh-custom-header * {
-    box-sizing: border-box;
-  }
+    .abh-custom-header,
+    .abh-custom-header * {
+        box-sizing: border-box;
+    }
 
-  .abh-custom-header {
-    --abh-bg: #ffffff;
-    --abh-text: #112127;
-    --abh-accent: #f2a116;
-    --abh-light: #f7f5ef;
-    --abh-dark: #07181c;
-    --abh-border: rgba(17, 33, 39, 0.08);
-    --abh-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 999;
-    font-family: "Inter", Arial, sans-serif;
-  }
+    .abh-custom-header {
+        --abh-bg: rgba(255, 255, 255, 0.96);
+        --abh-text: #112127;
+        --abh-accent: #f2a116;
+        --abh-accent-dark: #d88c0d;
+        --abh-dark: #07181c;
+        --abh-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        margin: 0;
+        position: relative;
+        z-index: 999;
+        font-family: "Inter", Arial, sans-serif;
+    }
 
-  .abh-custom-header .abh-header-shell {
-    width: min(1180px, calc(100% - 40px));
-    margin: 0 auto;
-    background: var(--abh-bg);
-    border-radius: 8px;
-    border: 1px solid var(--abh-border);
-    box-shadow: var(--abh-shadow);
-    padding: 18px 28px;
-  }
-
-  .abh-custom-header .abh-header-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
-
-  .abh-custom-header .abh-logo {
-    flex: 0 0 auto;
-    min-width: 180px;
-  }
-
-  .abh-custom-header .abh-logo a {
-    text-decoration: none;
-    color: var(--abh-text);
-    display: inline-block;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.02;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    transition: 0.25s ease;
-  }
-
-  .abh-custom-header .abh-logo a:hover {
-    color: var(--abh-accent);
-  }
-
-  .abh-custom-header .abh-desktop-nav {
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 34px;
-  }
-
-  .abh-custom-header .abh-desktop-nav a,
-  .abh-custom-header .abh-mobile-panel a {
-    text-decoration: none;
-    color: var(--abh-text);
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    transition: 0.25s ease;
-  }
-
-  .abh-custom-header .abh-desktop-nav a:hover,
-  .abh-custom-header .abh-desktop-nav a.abh-active,
-  .abh-custom-header .abh-mobile-panel a:hover,
-  .abh-custom-header .abh-mobile-panel a.abh-active {
-    color: var(--abh-accent);
-  }
-
-  .abh-custom-header .abh-right-actions {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex: 0 0 auto;
-  }
-
-  .abh-custom-header .abh-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 52px;
-    padding: 0 28px;
-    border: 0;
-    border-radius: 6px;
-    background: var(--abh-accent);
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: "Inter", Arial, sans-serif;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    white-space: nowrap;
-    transition: 0.25s ease;
-    cursor: pointer;
-  }
-
-  .abh-custom-header .abh-btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.95;
-  }
-
-  .abh-custom-header .abh-menu-toggle {
-    display: none;
-    width: 46px;
-    height: 46px;
-    border: 1px solid rgba(17, 33, 39, 0.12);
-    background: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .abh-custom-header .abh-menu-toggle span {
-    position: absolute;
-    width: 22px;
-    height: 2px;
-    background: var(--abh-text);
-    border-radius: 3px;
-    transition: 0.25s ease;
-  }
-
-  .abh-custom-header .abh-menu-toggle span:nth-child(1) {
-    transform: translateY(-7px);
-  }
-
-  .abh-custom-header .abh-menu-toggle span:nth-child(2) {
-    transform: translateY(0);
-  }
-
-  .abh-custom-header .abh-menu-toggle span:nth-child(3) {
-    transform: translateY(7px);
-  }
-
-  .abh-custom-header .abh-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg);
-  }
-
-  .abh-custom-header .abh-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .abh-custom-header .abh-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg);
-  }
-
-  .abh-custom-header .abh-mobile-panel {
-    display: none;
-    padding-top: 18px;
-    margin-top: 18px;
-    border-top: 1px solid rgba(17, 33, 39, 0.08);
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .abh-custom-header .abh-mobile-panel a {
-    padding: 6px 0;
-  }
-
-  .abh-custom-header .abh-mobile-btn {
-    margin-top: 8px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .abh-custom-header .abh-mobile-panel.open {
-    display: flex;
-  }
-
-  @media (max-width: 1024px) {
     .abh-custom-header .abh-header-shell {
-      width: min(100%, calc(100% - 24px));
-      padding: 16px 18px;
-    }
-
-    .abh-custom-header .abh-desktop-nav,
-    .abh-custom-header .abh-right-actions .abh-btn {
-      display: none;
-    }
-
-    .abh-custom-header .abh-menu-toggle {
-      display: inline-flex;
-    }
-
-    .abh-custom-header .abh-logo a {
-      font-size: 18px;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .abh-custom-header .abh-header-shell {
-      padding: 14px 16px;
-      border-radius: 6px;
+        width: min(1200px, calc(100% - 40px));
+        margin: 0 auto;
+        background: var(--abh-bg);
+        border-radius: 14px;
+        backdrop-filter: blur(8px);
     }
 
     .abh-custom-header .abh-header-row {
-      gap: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
     }
 
     .abh-custom-header .abh-logo {
-      min-width: 0;
-      max-width: calc(100% - 64px);
+        flex: 0 0 auto;
+        min-width: 190px;
+        display: flex;
+        align-items: center;
     }
 
     .abh-custom-header .abh-logo a {
-      font-size: 16px;
-      line-height: 1.05;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        line-height: 1;
+    }
+
+    .abh-custom-header .abh-logo img {
+        display: block;
+        width: auto;
+        height: 80px;
+        max-width: 240px;
+        object-fit: contain;
+    }
+
+    .abh-custom-header .abh-desktop-nav {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        flex-wrap: wrap;
+    }
+
+    .abh-custom-header .abh-desktop-nav a,
+    .abh-custom-header .abh-mobile-panel a {
+        text-decoration: none;
+        color: var(--abh-text);
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        transition: 0.25s ease;
+        position: relative;
+    }
+
+    .abh-custom-header .abh-desktop-nav a:hover,
+    .abh-custom-header .abh-desktop-nav a.abh-active,
+    .abh-custom-header .abh-mobile-panel a:hover,
+    .abh-custom-header .abh-mobile-panel a.abh-active {
+        color: var(--abh-accent);
+    }
+
+    .abh-custom-header .abh-desktop-nav a.abh-active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -8px;
+        height: 2px;
+        background: var(--abh-accent);
+        border-radius: 999px;
+    }
+
+    .abh-custom-header .abh-right-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 0 0 auto;
+    }
+
+    .abh-custom-header .abh-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 0 24px;
+        border: 0;
+        border-radius: 8px;
+        background: var(--abh-accent);
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+        font-family: "Inter", Arial, sans-serif;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transition: 0.25s ease;
+        cursor: pointer;
+    }
+
+    .abh-custom-header .abh-btn:hover {
+        transform: translateY(-2px);
+        background: var(--abh-accent-dark);
+        color: #fff;
     }
 
     .abh-custom-header .abh-menu-toggle {
-      width: 44px;
-      height: 44px;
+        display: none;
+        width: 46px;
+        height: 46px;
+        border: 0;
+        background: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     }
-  }
+
+    .abh-custom-header .abh-menu-toggle span {
+        position: absolute;
+        width: 22px;
+        height: 2px;
+        background: var(--abh-text);
+        border-radius: 3px;
+        transition: 0.25s ease;
+    }
+
+    .abh-custom-header .abh-menu-toggle span:nth-child(1) {
+        transform: translateY(-7px);
+    }
+
+    .abh-custom-header .abh-menu-toggle span:nth-child(2) {
+        transform: translateY(0);
+    }
+
+    .abh-custom-header .abh-menu-toggle span:nth-child(3) {
+        transform: translateY(7px);
+    }
+
+    .abh-custom-header .abh-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .abh-custom-header .abh-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .abh-custom-header .abh-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .abh-custom-header .abh-mobile-panel {
+        display: none;
+        padding-top: 18px;
+        margin-top: 18px;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .abh-custom-header .abh-mobile-panel a {
+        padding: 8px 0;
+        font-size: 14px;
+    }
+
+    .abh-custom-header .abh-mobile-btn {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .abh-custom-header .abh-mobile-panel.open {
+        display: flex;
+    }
+
+    @media (max-width: 1180px) {
+        .abh-custom-header .abh-desktop-nav {
+            gap: 20px;
+        }
+
+        .abh-custom-header .abh-desktop-nav a {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .abh-custom-header {
+            padding: 14px 0;
+        }
+
+        .abh-custom-header .abh-header-shell {
+            width: min(100%, calc(100% - 24px));
+            padding: 14px 16px;
+            border-radius: 12px;
+        }
+
+        .abh-custom-header .abh-desktop-nav,
+        .abh-custom-header .abh-right-actions .abh-btn {
+            display: none;
+        }
+
+        .abh-custom-header .abh-menu-toggle {
+            display: inline-flex;
+        }
+
+        .abh-custom-header .abh-logo img {
+            height: 56px;
+            max-width: 210px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .abh-custom-header {
+            padding: 10px 0;
+        }
+
+        .abh-custom-header .abh-header-shell {
+            padding: 12px 14px;
+            border-radius: 10px;
+        }
+
+        .abh-custom-header .abh-header-row {
+            gap: 14px;
+        }
+
+        .abh-custom-header .abh-logo {
+            min-width: 0;
+            max-width: calc(100% - 64px);
+        }
+
+        .abh-custom-header .abh-logo img {
+            height: 48px;
+            max-width: 180px;
+        }
+
+        .abh-custom-header .abh-menu-toggle {
+            width: 44px;
+            height: 44px;
+        }
+
+        .abh-custom-header .abh-mobile-btn {
+            min-height: 50px;
+        }
+    }
 </style>
 
 <header class="abh-custom-header">
-  <div class="abh-header-shell">
-    <div class="abh-header-row">
-      <div class="abh-logo">
-        <a href="/">ANJANEY’S BIRIYANI<br>HOUSE</a>
-      </div>
+    <div class="abh-header-shell">
+        <div class="abh-header-row">
+            <div class="abh-logo">
+                <a href="/" aria-label="Anjaney's Biriyani House Home">
+                    <img src="https://anjaney.ca/wp-content/uploads/2026/04/Logo.jpeg"
+                        alt="Anjaney's Biriyani House Logo">
+                </a>
+            </div>
 
-      <nav class="abh-desktop-nav" aria-label="Main navigation">
-        <a href="/" class="abh-active">Home</a>
-        <a href="/about">About</a>
-        <a href="/menu">Menu</a>
-        <a href="/blog">Blog</a>
-        <a href="/contact">Contact</a>
-      </nav>
+            <nav class="abh-desktop-nav" aria-label="Main navigation">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/menu">Menu</a>
+                <a href="/order-online">Order Online</a>
+                <a href="/reservations">Reservations</a>
+                <a href="/blog">Blog</a>
+                <a href="/contact">Contact</a>
+            </nav>
 
-      <div class="abh-right-actions">
-        <a href="/reservations" class="abh-btn">Book a Table</a>
+            <div class="abh-right-actions">
+                <a href="/reservations" class="abh-btn">Book a Table</a>
 
-        <button class="abh-menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+                <button class="abh-menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="abh-mobile-panel" aria-label="Mobile navigation">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/menu">Menu</a>
+            <a href="/order-online">Order Online</a>
+            <a href="/reservations">Reservations</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+            <a href="/reservations" class="abh-btn abh-mobile-btn">Book a Table</a>
+        </div>
     </div>
-
-    <div class="abh-mobile-panel" aria-label="Mobile navigation">
-      <a href="/" class="abh-active">Home</a>
-      <a href="/about">About</a>
-      <a href="/menu">Menu</a>
-      <a href="/blog">Blog</a>
-      <a href="/contact">Contact</a>
-      <a href="/reservations" class="abh-btn abh-mobile-btn">Book a Table</a>
-    </div>
-  </div>
 </header>
 
 <script>
-  (function () {
-    const header = document.currentScript.previousElementSibling;
-    if (!header) return;
+    (function () {
+        const script = document.currentScript;
+        const header = script ? script.previousElementSibling : document.querySelector('.abh-custom-header');
+        if (!header) return;
 
-    const toggle = header.querySelector('.abh-menu-toggle');
-    const mobilePanel = header.querySelector('.abh-mobile-panel');
+        const toggle = header.querySelector('.abh-menu-toggle');
+        const mobilePanel = header.querySelector('.abh-mobile-panel');
+        const allNavLinks = header.querySelectorAll('.abh-desktop-nav a, .abh-mobile-panel a');
 
-    if (!toggle || !mobilePanel) return;
+        function normalizePath(path) {
+            if (!path) return '/';
+            path = path.split('?')[0].split('#')[0];
+            path = path.replace(/\/+$/, '');
+            return path === '' ? '/' : path;
+        }
 
-    toggle.addEventListener('click', function () {
-      const isOpen = mobilePanel.classList.toggle('open');
-      toggle.classList.toggle('active', isOpen);
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
+        function setActiveMenu() {
+            const currentPath = normalizePath(window.location.pathname);
 
-    mobilePanel.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        mobilePanel.classList.remove('open');
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
+            allNavLinks.forEach(function (link) {
+                link.classList.remove('abh-active');
+
+                const linkUrl = new URL(link.getAttribute('href'), window.location.origin);
+                const linkPath = normalizePath(linkUrl.pathname);
+
+                let isActive = false;
+
+                if (linkPath === '/') {
+                    isActive = currentPath === '/';
+                } else {
+                    isActive = currentPath === linkPath || currentPath.indexOf(linkPath + '/') === 0;
+                }
+
+                if (isActive) {
+                    link.classList.add('abh-active');
+                }
+            });
+        }
+
+        setActiveMenu();
+
+        if (toggle && mobilePanel) {
+            toggle.addEventListener('click', function () {
+                const isOpen = mobilePanel.classList.toggle('open');
+                toggle.classList.toggle('active', isOpen);
+                toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            mobilePanel.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mobilePanel.classList.remove('open');
+                    toggle.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+    })();
 </script>
