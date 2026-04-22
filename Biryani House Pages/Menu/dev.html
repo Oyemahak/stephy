@@ -92,6 +92,25 @@
         color: var(--abh-gold);
     }
 
+    .abh-menu-page .abh-card-btn {
+        display: inline-block;
+        margin-top: 18px;
+        background: var(--abh-gold);
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        transition: 0.25s ease;
+    }
+
+    .abh-menu-page .abh-card-btn:hover {
+        transform: translateY(-2px);
+        opacity: 0.95;
+    }
+
     /* HERO */
     .abh-menu-hero {
         position: relative;
@@ -345,7 +364,6 @@
     }
 
     @media (max-width: 991px) {
-
         .abh-menu-grid,
         .abh-featured-grid {
             grid-template-columns: 1fr;
@@ -393,12 +411,16 @@
         .abh-menu-cta {
             padding: 54px 0;
         }
+
+        .abh-menu-page .abh-card-btn {
+            width: 100%;
+            text-align: center;
+        }
     }
 </style>
 
 <div class="abh-menu-page">
 
-    <!-- HERO -->
     <section class="abh-menu-hero">
         <div class="abh-container">
             <div class="abh-hero-content">
@@ -409,14 +431,13 @@
                     ingredients, and the comforting taste of traditional biryani.
                 </p>
                 <div class="abh-hero-actions">
-                    <a href="/shop" class="abh-btn">Order Online</a>
-                    <a href="/contact" class="abh-btn-outline">Book a Table</a>
+                    <a href="/order-online/" class="abh-btn">Order Online</a>
+                    <a href="/reservations/" class="abh-btn-outline">Book a Table</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- INTRO -->
     <section class="abh-menu-intro">
         <div class="abh-container">
             <div class="abh-section-tag">Special Menu</div>
@@ -428,7 +449,6 @@
         </div>
     </section>
 
-    <!-- FILTER STYLE ROW -->
     <section class="abh-menu-filters">
         <div class="abh-container">
             <div class="abh-menu-filter-wrap">
@@ -442,7 +462,6 @@
         </div>
     </section>
 
-    <!-- BIRYANI SPECIALS -->
     <section class="abh-menu-category">
         <div class="abh-container">
             <div class="abh-menu-category-header">
@@ -462,14 +481,13 @@
                         <h4>Chicken Biryani</h4>
                         <div class="abh-price">$14.99</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Tender chicken layered with aromatic basmati rice, herbs, and signature house spices.
-                    </p>
+                    <p class="abh-menu-desc">Tender chicken layered with aromatic basmati rice, herbs, and signature house spices.</p>
                     <div class="abh-menu-meta">
                         <span>Most Popular</span>
                         <span>Halal</span>
                         <span>Medium Spice</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -477,14 +495,13 @@
                         <h4>Beef Biryani</h4>
                         <div class="abh-price">$16.99</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Rich and flavourful beef cooked slowly with fragrant rice and traditional biryani masala.
-                    </p>
+                    <p class="abh-menu-desc">Rich and flavourful beef cooked slowly with fragrant rice and traditional biryani masala.</p>
                     <div class="abh-menu-meta">
                         <span>Chef’s Pick</span>
                         <span>Slow Cooked</span>
                         <span>Medium Spice</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -492,14 +509,13 @@
                         <h4>Mutton Biryani</h4>
                         <div class="abh-price">$17.99</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        A deeply satisfying biryani made with tender mutton, long-grain rice, and bold spices.
-                    </p>
+                    <p class="abh-menu-desc">A deeply satisfying biryani made with tender mutton, long-grain rice, and bold spices.</p>
                     <div class="abh-menu-meta">
                         <span>Traditional</span>
                         <span>Premium</span>
                         <span>Rich Flavour</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -507,20 +523,18 @@
                         <h4>Egg Biryani</h4>
                         <div class="abh-price">$12.99</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        A comforting biryani layered with boiled eggs, savoury masala, and fluffy seasoned rice.
-                    </p>
+                    <p class="abh-menu-desc">A comforting biryani layered with boiled eggs, savoury masala, and fluffy seasoned rice.</p>
                     <div class="abh-menu-meta">
                         <span>Classic</span>
                         <span>Budget Friendly</span>
                         <span>Mild to Medium</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- STARTERS -->
     <section class="abh-menu-category">
         <div class="abh-container">
             <div class="abh-menu-category-header">
@@ -539,13 +553,12 @@
                         <h4>Chicken 65</h4>
                         <div class="abh-price">$10.99</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Crispy fried chicken tossed in spicy South Indian flavours with curry leaves and peppers.
-                    </p>
+                    <p class="abh-menu-desc">Crispy fried chicken tossed in spicy South Indian flavours with curry leaves and peppers.</p>
                     <div class="abh-menu-meta">
                         <span>Spicy</span>
                         <span>Best Seller</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -553,13 +566,12 @@
                         <h4>Veg Samosa</h4>
                         <div class="abh-price">$5.99</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Crisp pastry filled with seasoned potatoes and peas, served hot and full of flavour.
-                    </p>
+                    <p class="abh-menu-desc">Crisp pastry filled with seasoned potatoes and peas, served hot and full of flavour.</p>
                     <div class="abh-menu-meta">
                         <span>Vegetarian</span>
                         <span>Crispy</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -567,13 +579,12 @@
                         <h4>Pepper Chicken</h4>
                         <div class="abh-price">$11.99</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Tender chicken tossed in black pepper, onions, and a bold house seasoning.
-                    </p>
+                    <p class="abh-menu-desc">Tender chicken tossed in black pepper, onions, and a bold house seasoning.</p>
                     <div class="abh-menu-meta">
                         <span>House Special</span>
                         <span>Medium Spice</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -581,19 +592,17 @@
                         <h4>Paneer Tikka</h4>
                         <div class="abh-price">$10.49</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Cottage cheese cubes marinated in spices and grilled until lightly charred and smoky.
-                    </p>
+                    <p class="abh-menu-desc">Cottage cheese cubes marinated in spices and grilled until lightly charred and smoky.</p>
                     <div class="abh-menu-meta">
                         <span>Vegetarian</span>
                         <span>Grilled</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VEG -->
     <section class="abh-menu-category">
         <div class="abh-container">
             <div class="abh-menu-category-header">
@@ -612,14 +621,12 @@
                         <h4>Vegetable Biryani</h4>
                         <div class="abh-price">$13.49</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Fresh vegetables, fragrant rice, herbs, and house masala cooked together for a balanced,
-                        aromatic dish.
-                    </p>
+                    <p class="abh-menu-desc">Fresh vegetables, fragrant rice, herbs, and house masala cooked together for a balanced, aromatic dish.</p>
                     <div class="abh-menu-meta">
                         <span>Vegetarian</span>
                         <span>Popular</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -627,14 +634,12 @@
                         <h4>Paneer Biryani</h4>
                         <div class="abh-price">$14.49</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Soft paneer and seasoned rice layered with warming spices for a rich vegetarian biryani
-                        experience.
-                    </p>
+                    <p class="abh-menu-desc">Soft paneer and seasoned rice layered with warming spices for a rich vegetarian biryani experience.</p>
                     <div class="abh-menu-meta">
                         <span>Vegetarian</span>
                         <span>Rich & Creamy</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -642,13 +647,12 @@
                         <h4>Chilli Paneer</h4>
                         <div class="abh-price">$11.49</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Indo-Chinese style paneer tossed with peppers, onions, and a savoury spicy sauce.
-                    </p>
+                    <p class="abh-menu-desc">Indo-Chinese style paneer tossed with peppers, onions, and a savoury spicy sauce.</p>
                     <div class="abh-menu-meta">
                         <span>Vegetarian</span>
                         <span>Spicy</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -656,19 +660,17 @@
                         <h4>Gobi Manchurian</h4>
                         <div class="abh-price">$9.99</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Crispy cauliflower bites coated in a tangy, spicy sauce with peppers and onions.
-                    </p>
+                    <p class="abh-menu-desc">Crispy cauliflower bites coated in a tangy, spicy sauce with peppers and onions.</p>
                     <div class="abh-menu-meta">
                         <span>Vegetarian</span>
                         <span>Crispy</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SIDES + DRINKS -->
     <section class="abh-menu-category" style="padding-bottom: 70px;">
         <div class="abh-container">
             <div class="abh-menu-category-header">
@@ -687,13 +689,12 @@
                         <h4>Raita</h4>
                         <div class="abh-price">$3.49</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Creamy yogurt with herbs and spices — the perfect cooling side with biryani.
-                    </p>
+                    <p class="abh-menu-desc">Creamy yogurt with herbs and spices — the perfect cooling side with biryani.</p>
                     <div class="abh-menu-meta">
                         <span>Side</span>
                         <span>Cooling</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -701,13 +702,12 @@
                         <h4>Mirchi Salan</h4>
                         <div class="abh-price">$3.99</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        A classic tangy and spicy curry served as a traditional accompaniment to biryani.
-                    </p>
+                    <p class="abh-menu-desc">A classic tangy and spicy curry served as a traditional accompaniment to biryani.</p>
                     <div class="abh-menu-meta">
                         <span>Traditional Side</span>
                         <span>Spicy</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -715,13 +715,12 @@
                         <h4>Mango Lassi</h4>
                         <div class="abh-price">$4.99</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        Chilled mango yogurt drink that is refreshing, smooth, and lightly sweet.
-                    </p>
+                    <p class="abh-menu-desc">Chilled mango yogurt drink that is refreshing, smooth, and lightly sweet.</p>
                     <div class="abh-menu-meta">
                         <span>Beverage</span>
                         <span>Refreshing</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
 
                 <div class="abh-menu-card">
@@ -729,19 +728,17 @@
                         <h4>Soft Drinks</h4>
                         <div class="abh-price">$2.49</div>
                     </div>
-                    <p class="abh-menu-desc">
-                        A selection of chilled soft drinks to pair with your meal.
-                    </p>
+                    <p class="abh-menu-desc">A selection of chilled soft drinks to pair with your meal.</p>
                     <div class="abh-menu-meta">
                         <span>Beverage</span>
                         <span>Cold</span>
                     </div>
+                    <a href="/order-online/" class="abh-card-btn">Order Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURED COMBO -->
     <section class="abh-featured-combo">
         <div class="abh-container">
             <div class="abh-featured-grid">
@@ -749,10 +746,9 @@
                     <div class="abh-section-tag" style="color:#fff;">Featured Combo</div>
                     <h2>Family Feast Combo</h2>
                     <p>
-                        A generous meal for sharing — ideal for family dinner, small gatherings, or a satisfying weekend
-                        treat from Anjaney’s Biryani House.
+                        A generous meal for sharing — ideal for family dinner, small gatherings, or a satisfying weekend treat from Anjaney’s Biryani House.
                     </p>
-                    <a href="/shop" class="abh-btn">Order This Combo</a>
+                    <a href="/order-online/" class="abh-btn">Order This Combo</a>
                 </div>
 
                 <div class="abh-featured-box">
@@ -765,27 +761,25 @@
                         <li>2 Drinks</li>
                         <li>Raita & Salan</li>
                     </ul>
-                    <a href="/contact" class="abh-btn-outline">Reserve for Dine-In</a>
+                    <a href="/reservations/" class="abh-btn-outline">Reserve for Dine-In</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="abh-menu-cta">
         <div class="abh-container">
             <div class="abh-menu-cta-inner">
                 <div>
                     <h2>Ready to enjoy Anjaney’s Biryani House?</h2>
                     <p>
-                        Place your order online for pickup or reserve your table and enjoy a warm dine-in experience
-                        with us.
+                        Place your order online for pickup or reserve your table and enjoy a warm dine-in experience with us.
                     </p>
                 </div>
 
                 <div class="abh-menu-cta-actions">
-                    <a href="/shop" class="abh-btn">Order Online</a>
-                    <a href="/contact" class="abh-btn-outline">Book a Table</a>
+                    <a href="/order-online/" class="abh-btn">Order Online</a>
+                    <a href="/reservations/" class="abh-btn-outline">Book a Table</a>
                 </div>
             </div>
         </div>
